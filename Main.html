@@ -32,9 +32,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        
-        
       }
       footer {
         background-color: black;
@@ -59,6 +56,9 @@
         margin-top: 35px;
         margin-bottom: 40px;
       }
+      .navspace{
+        padding-left:10px;
+      }
     </style>
   </head>
 
@@ -70,15 +70,31 @@
       <nav>
         
           <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 80px; width: auto"></a>
+
+          <div class="navspace">
           <a href="showlist.html" style="color: white;">Show List</a>
+          </div>
+
+          <div class="navspace">
           <a href="leaderboard.html" style="color: white;">Leaderboards</a>
+          </div>
         
       </nav>
 
-      <form action="#" method="get">
+      <form action="#" method="get"> 
         <input type="text" name="search" placeholder="Find a show...">
         <button type="submit">Search</button>
       </form>
+      
+      <script> //search bar search functionality
+        const search = document.getElementById('search');
+        const button = document.querySelector('button');
+      
+        button.addEventListener('click', () => {
+          const query = search.value;
+          // perform search with query
+        });
+      </script>
 
       <a href="signup.html" style="padding-right:40px;color: white;">Sign Up</a>
     </header>
@@ -91,14 +107,25 @@
 
     <footer>
       <nav>
+        <div class="navspace">
         <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
+        </div>
+
+        <div class="navspace">
         <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
+        </div>
+
+        <div class="navspace">
         <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
+        </div>
       </nav>
 
         <div style="display: flex; align-items: center; padding-right:30px;">
           <button>Info and Credits</button>
+
+          <div class="navspace">
           <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
+          </div>
         </div>
       
 
