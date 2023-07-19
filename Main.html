@@ -2,11 +2,11 @@
 <html>
 
   <head>
-    <link rel="icon" type="image/png" href="titlelogo.png">
+    <link rel="icon" type="image/png" href="pictures/titleicon.png">
     <title>Welcome to Aniplay</title>
     <style>
       body {
-      background-image:url(background\ anime.jpg);height:35px;width:35px;
+      background-image:url(pictures/background\ anime.jpg);height:35px;width:35px;
       margin: 0;
       padding:0;
       background-size:cover;
@@ -20,6 +20,7 @@
         width:100%;
         height:40px;
         display:flex;
+        flex-direction:row;
         justify-content: space-between;
         align-items: center;
         position:fixed;
@@ -27,10 +28,20 @@
 
         
       }
+      nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        
+      }
       footer {
         background-color: black;
         color: white;
         padding: 10px;
+        display: flex;
+        justify-content: space-between;
         text-align: center;
         position:fixed;
         bottom:0;
@@ -53,13 +64,14 @@
 
 
   <body>
+
     <header>
 
       <nav>
         
-          <a href="Main.html"><img src="aniplaylogo.png" alt="Main page link" style="height: 138px; width: 114px"></a></li>
-          <a href="showlist.html">Show List</a></li>
-          <a href="leaderboard.html">Leaderboards</a></li>
+          <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 80px; width: auto"></a>
+          <a href="showlist.html" style="color: white;">Show List</a>
+          <a href="leaderboard.html" style="color: white;">Leaderboards</a>
         
       </nav>
 
@@ -68,17 +80,34 @@
         <button type="submit">Search</button>
       </form>
 
-      <a href="signup.html" style="padding-right:40px">Sign Up</a>
+      <a href="signup.html" style="padding-right:40px;color: white;">Sign Up</a>
     </header>
 
     <main>
 
-    <h1>Welcome to Aniplay!</h1>
+    <h1><br><br>Welcome to Aniplay!</h1>
 
     </main>
 
     <footer>
-      <p>Footer content here</p>
+      <nav>
+        <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
+        <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
+        <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
+      </nav>
+
+        <div style="display: flex; align-items: center; padding-right:30px;">
+          <button>Info and Credits</button>
+          <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
+        </div>
+      
+
+      </nav>
+      
     </footer>
+
+
   </body>
+
+
 </html>
