@@ -2,139 +2,208 @@
 <html>
 
   <head>
-    <link rel="icon" type="image/png" href="pictures/titleicon.png">
-    <title>Welcome to Aniplay</title>
-    <style>
-      body {
+  <link rel="icon" type="image/png" href="pictures/titleicon.png">
+  <title>Welcome to Aniplay</title>
+  
+  <style>
+    body {
       background-image:url(pictures/background\ anime.jpg);height:35px;width:35px;
       margin: 0;
       padding:0;
       background-size:cover;
       background-position:center center;
       font-family: 'Roboto';
-      }
-      header {
-        background-color: #5526AF;
-        color: white;
-        padding: 20px;
-        width:100%;
-        height:40px;
-        display:flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        position:fixed;
-        top:0;
+    }
+    header {
+      background-color: #5526AF;
+      color: white;
+      padding: 20px;
+      width:100%;
+      height:40px;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      align-items: center;
+      position:fixed;
+      top:0;
+    }
+    nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:40px;
+    }
+    form {
+      text-align: center;
+      display: inline-block;
+    }
+    h1{
+      color:white;
+    }
+    main{
+      margin-top: 35px;
+      margin-bottom: 40px;
+    }
+    .navspace{
+      padding-left:10px;
+    }
 
+    .signup-button{
+      margin-right:40px;
+      color: white;
+      background: black;
+    }
+
+    .loginform-popup{ 
         
-      }
-      nav{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      footer {
-        background-color: black;
-        color: white;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        position:fixed;
-        bottom:0;
-        width:100%;
-        height:40px;
-      }
-      form {
-        text-align: center;
-        display: inline-block;
-      }
-      h1{
-        color:white;
-      }
-      main{
-        margin-top: 35px;
-        margin-bottom: 40px;
-      }
-      .navspace{
-        padding-left:10px;
-      }
-    </style>
-  </head>
+      border: black solid 2px;
+      display: none;
+      position: fixed;
+      bottom: 30%;
+      left:40%;
+      z-index: 9;
+    }
+    .login-container{
+      max-width: 400px;
+      padding: 10px;
+      background-color:  #5526af;
+    }
+    .login-container input[type=password], 
+    .login-container input[type=text] {
+      background-color: white;
+      border: none;
+      width: 90%;
+      padding: 13px;
+      margin: 5px 0 22px 0;
+    }
+    .login-container .btn {
+      background-color: black;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }   
+    .login-container .btn:hover, .open-button:hover { 
+      opacity: 1;
+    }
+
+</style>
+</head>
 
 
-  <body>
+<body>
 
-    <header>
+  <header>
 
-      <nav>
+    <nav>
         
-          <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 80px; width: auto"></a>
+    <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 80px; width: auto"></a>
 
-          <div class="navspace">
-          <a href="showlist.html" style="color: white;">Show List</a>
-          </div>
+    <div class="navspace">
+    <a href="showlist.html" style="color: white;">Show List</a>
+    </div>
 
-          <div class="navspace">
-          <a href="leaderboard.html" style="color: white;">Leaderboards</a>
-          </div>
+    <div class="navspace">
+    <a href="leaderboard.html" style="color: white;">Leaderboards</a>
+    </div>
         
-      </nav>
+    </nav>
 
-      <form action="#" method="get"> 
-        <input type="text" name="search" placeholder="Find a show...">
-        <button type="submit">Search</button>
-      </form>
+    <form action="#" method="get"> 
+    <input type="text" name="search" placeholder="Find a show...">
+    <button type="submit">Search</button>
+    </form>
+
+    <script> //search bar search functionality
+    const search = document.getElementById('search');
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+    const query = search.value;
+    });
+    // perform search with query
+    </script>
+
+
+    <!--Button that on press, opens the login form Popup-->
+    <button onclick="openPop()" class="signup-button">Sign Up</button>
+
+    <!-- Login form -->
+    <div class="loginform-popup" id="loginPop">
+    <form action="" class="login-container"> <!-- What the form does when pressed submit-->
+    <h1>Welcome Back!<br>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="passw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="passw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn" onclick="closePop()">Close</button>
       
-      <script> //search bar search functionality
-        const search = document.getElementById('search');
-        const button = document.querySelector('button');
-      
-        button.addEventListener('click', () => {
-          const query = search.value;
-          // perform search with query
-        });
-      </script>
+    <h3>Dont have an account? <button onclick="">Sign up</button></h3> <!--Button leads to sign up-->
+    </form>
+    </div>
 
-      <a href="signup.html" style="padding-right:40px;color: white;">Sign Up</a>
+    <!--Script for login form-->
+    <script>
+    function openPop() {
+    document.getElementById("loginPop").style.display = "block";
+    }
+    function closePop() {
+    document.getElementById("loginPop").style.display = "none";
+    }
+        
+    </script>
     </header>
 
-    <main>
+
+    <main> <!--Main content of main page-->
 
     <h1><br><br>Welcome to Aniplay!</h1>
 
     </main>
 
+
     <footer>
-      <nav>
-        <div class="navspace">
-        <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
-        </div>
+    <nav>
+    <div class="navspace">
+    <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
+    </div>
 
-        <div class="navspace">
-        <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
-        </div>
+    <div class="navspace">
+    <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
+    </div>
 
-        <div class="navspace">
-        <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
-        </div>
-      </nav>
+    <div class="navspace">
+    <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
+    </div>
+    </nav>
 
-        <div style="display: flex; align-items: center; padding-right:30px;">
-          <button>Info and Credits</button>
+    <div style="display: flex; align-items: center; padding-right:30px;">
+    <button>Info and Credits</button>
 
-          <div class="navspace">
-          <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
-          </div>
-        </div>
-      
+    <div class="navspace">
+    <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
+    </div>
 
-      </nav>
-      
+    </div>
+    </nav> 
     </footer>
 
-
-  </body>
-
-
+</body>
 </html>
