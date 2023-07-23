@@ -41,7 +41,8 @@ form {
     background-color:  #5526af;
   }
 .login-container input[type=password], 
-.login-container input[type=text] {
+.login-container input[type=text],
+.login-container input[type=email] {
     background-color: white;
     border: none;
     width: 90%;
@@ -61,6 +62,19 @@ form {
 .login-container .btn:hover, .open-button:hover { 
     opacity: 1;
   }
+#errorMsg{ /* error msg display if login fail */
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+#errorsignMsg{ /*error message display if sign up fail */
+  color:red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+
+}
 
   footer {
     background-color: black;
@@ -83,6 +97,7 @@ form {
 .navspace{
     padding-left:10px;
   }
+
 
 /*Reserves space for header and footer*/
 main{
