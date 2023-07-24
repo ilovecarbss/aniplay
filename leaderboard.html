@@ -4,5 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="General_css.css">
 </head>
+
+<body class = "generalbody">
+  <!--Start of header-->
+  <header> 
+
+    <nav class="headfootnav">
+        
+    <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 65px; width: auto"></a>
+
+    <div class="navspace">
+    <a href="showlist.html" style="color: white;">Show List</a>
+    </div>
+
+    <div class="navspace">
+    <a href="leaderboard.html" style="color: white;">Leaderboards</a>
+    </div>
+        
+    </nav>
+
+    <form action="#" method="get"> <!--Search bar-->
+    <input type="text" name="search" placeholder="Find a show...">
+    <button type="submit">Search</button>
+    </form>
+
+    <script> //search bar dummy search functionality
+    const search = document.getElementById('search');
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+    const query = search.value;
+    });
+    // perform search with query
+    </script>
+
+
+    <!--Button that on press, opens the login form Popup-->
+    <button onclick="openPop()" class="signup-button">Login</button>
+
+
+    <!-- Login form -->
+    <div class="loginform-popup" id="loginPop">
+    <form name="loginform" class="login-container" onsubmit="return Loginvalidate()" method="POST"> <!-- What the form does when pressed submit-->
+    <h1>Welcome Back!<br>Login</h1>
+
+    <label for="name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="nameLog" name="name" required>
+    <label for="passw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="passLog" name="passw" required>
+
+    <button type="submit" class="bttn">Login</button>
+    <button type="button" class="bttn" onclick="closePop()">Close</button>
+    <div id="errorMsg"></div>
+
+    <!--Button leads to sign up,closes login-->
+    <h3>Dont have an account? <button type="button" onclick="SignupPop();closePop()" >Sign up</button></h3> 
+    </form>
+    </div>
+    
+    <!--Sign up form-->
+    <div class="loginform-popup" id="SignPop">
+    <form name="signupform" class="login-container" onsubmit="return Signupvalidate()" method="POST"> <!-- What the form does when pressed submit-->
+    <h1>Welcome To Aniplay!<br>Sign up</h1>
+  
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" id="emailSign" name="email" required>
+    <label for="name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="nameSign" name="name" required>
+    <label for="passw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="passSign" name="passw" required>
+
+    <button type="submit" class="bttn" >Sign Up</button>
+    <button type="button" class="bttn" onclick="closeSignPop()">Close</button>
+    <div id="errorsignMsg"></div>
+   
+    </form>
+    </div>
+
+    <!--Script for login form and signup form-->
+    <script>
+
+      //login form script
+      function Loginvalidate() {
+	    var name = document.getElementById("nameLog").value;
+	    var password = document.getElementById("passLog").value;
+
+      //if username or password field empty, or password is shorter than 8 characters, output error
+	    if (name == "" || password == "") { 
+		  document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		  return false;
+	    }
+
+	    else if (password.length < 8) {
+		  document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+		  return false;
+	    }
+
+	    else {
+		  confirm("Successfully logged in");
+		  return true;
+	    }
+      }
+
+      //handles signup form script
+      function Signupvalidate() {
+	    var Simail = document.getElementById("emailSign").value;
+	    var Siname = document.getElementById("nameSign").value;
+	    var Sipassword = document.getElementById("passSign").value;
+
+	    if (Simail == "" || Siname == "" || Sipassword == "") {
+		  document.getElementById("errorsignMsg").innerHTML = "Please fill in the required fields"
+		  return false;
+	    }
+
+	    else if (Sipassword.length < 8) {
+		  document.getElementById("errorsignMsg").innerHTML = "Your password must include at least 8 characters"
+		  return false;
+	    }
+	    else {
+		  //reloads the page after user presses ok on alert
+      confirm("Successfully signed up")
+		  return true;
+      
+	    }
+      }
+      
+
+
+    //popup open/close functions
+    function openPop() {
+    document.getElementById("loginPop").style.display = "block";
+    }
+    function closePop() {
+    document.getElementById("loginPop").style.display = "none";
+    }
+    function SignupPop() {
+    document.getElementById("SignPop").style.display = "block";
+    }
+    function closeSignPop() {
+    document.getElementById("SignPop").style.display = "none";
+    }
+
+    </script>
+    </header> 
+    <!-- End Header-->
+    <!--Main-->
+    <main>
+
+    </main>
+
+    <!--Start of Footer-->
+    <footer>
+
+      <nav class = "headfootnav">
+      <div class="navspace">
+      <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
+      </div>
+  
+      <div class="navspace">
+      <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
+      </div>
+  
+      <div class="navspace">
+      <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
+      </div>
+      </nav>
+  
+      <div style="display: flex; align-items: center; padding-right:30px;">
+      <button>Info and Credits</button>
+  
+      <div class="navspace">
+      <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
+      </div>
+  
+      </div>
+      </nav> 
+      </footer>
+      <!--End footer-->
+  
+
+</body>
+</html>

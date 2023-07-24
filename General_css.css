@@ -107,3 +107,11 @@ main{
 body{
     font-family: 'Roboto';
 }
+
+.generalbody{
+  margin: 0;
+      padding:0;
+      background-size:cover;
+      background-position:center center;
+      background-color: #404040;
+}
