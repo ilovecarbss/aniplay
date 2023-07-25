@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="pictures/titleicon.png"> <!--Icon for the website at the title area-->
   <title>Aniplay</title>
   <link rel="stylesheet" href="General_css.css">
-  <script src="login_signupScr.js" type="text/javascript"></script> 
+  <script src="generalJS.js" type="text/javascript"></script> 
 
   <style>
     body {
@@ -76,7 +76,6 @@
     <!--Button that on press, opens the login form Popup-->
     <button onclick="openPop()" class="signup-button">Login</button>
 
-
     <!-- Login form -->
     <div class="loginform-popup" id="loginPop">
     <form name="loginform" class="login-container" onsubmit="return Loginvalidate()" method="POST"> <!-- What the form does when pressed submit-->
@@ -115,71 +114,7 @@
     </form>
     </div>
 
-    <!--Script for login form and signup form-->
-    <script>
-
-      //login form script
-      function Loginvalidate() {
-	    var name = document.getElementById("nameLog").value;
-	    var password = document.getElementById("passLog").value;
-
-      //if username or password field empty, or password is shorter than 8 characters, output error
-	    if (name == "" || password == "") { 
-		  document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-		  return false;
-	    }
-
-	    else if (password.length < 8) {
-		  document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-		  return false;
-	    }
-
-	    else {
-		  confirm("Successfully logged in");
-		  return true;
-	    }
-      }
-
-      //handles signup form script
-      function Signupvalidate() {
-	    var Simail = document.getElementById("emailSign").value;
-	    var Siname = document.getElementById("nameSign").value;
-	    var Sipassword = document.getElementById("passSign").value;
-
-	    if (Simail == "" || Siname == "" || Sipassword == "") {
-		  document.getElementById("errorsignMsg").innerHTML = "Please fill in the required fields"
-		  return false;
-	    }
-
-	    else if (Sipassword.length < 8) {
-		  document.getElementById("errorsignMsg").innerHTML = "Your password must include at least 8 characters"
-		  return false;
-	    }
-	    else {
-		  //reloads the page after user presses ok on alert
-      confirm("Successfully signed up")
-		  return true;
-      
-	    }
-      }
-      
-
-
-    //popup open/close functions
-    function openPop() {
-    document.getElementById("loginPop").style.display = "block";
-    }
-    function closePop() {
-    document.getElementById("loginPop").style.display = "none";
-    }
-    function SignupPop() {
-    document.getElementById("SignPop").style.display = "block";
-    }
-    function closeSignPop() {
-    document.getElementById("SignPop").style.display = "none";
-    }
-
-    </script>
+   
     </header> 
     <!-- End Header-->
 
