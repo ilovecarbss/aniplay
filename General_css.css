@@ -99,6 +99,23 @@ form {
   }
 
 
+#welcomebox{
+    font-weight: bolder;
+    font-size: auto;
+    text-align: center;
+    background-color: #5526AF;
+    color: white;
+    margin-left:30px;
+    height: 20%;
+    width:30%;
+    top:30%;
+    }
+ #slogan{
+    margin-left: 30px;
+    color: white;
+    font-size:x-large;
+ }
+
 /*Reserves space for header and footer*/
 main{
     padding-top: 5%;
