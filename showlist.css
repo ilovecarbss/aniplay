@@ -1,0 +1,205 @@
+/* css attributes for stuff that is used across every page in the website, (EG: header footer css)
+For example: headers,footers etc. 
+Will add here when i finish sorting out the design for header and footer */
+header {
+  background-color: #5526AF;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+form {
+  text-align: center;
+  display: inline-block;
+}
+
+.signup-button {
+  margin-right: 40px;
+  color: white;
+  background: black;
+}
+
+.loginform-popup {
+  border: black solid 2px;
+  display: none;
+  position: fixed;
+  bottom: 30%;
+  left: 40%;
+  z-index: 9;
+}
+
+.login-container {
+  max-width: 400px;
+  padding: 10px;
+  background-color: #5526af;
+}
+
+.login-container input[type=password],
+.login-container input[type=text],
+.login-container input[type=email] {
+  background-color: white;
+  border: none;
+  width: 90%;
+  padding: 13px;
+  margin: 5px 0 22px 0;
+}
+
+.login-container .bttn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.login-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#errorMsg { /* error msg display if login fail */
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+#errorsignMsg { /*error message display if sign up fail */
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 6%;
+}
+
+.headfootnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navspace {
+  padding-left: 10px;
+}
+
+#welcomebox {
+  font-weight: bolder;
+  font-size: auto;
+  text-align: center;
+  background-color: #5526AF;
+  color: white;
+  margin-left: 30px;
+  height: 20%;
+  width: 30%;
+  top: 30%;
+}
+
+#slogan {
+  margin-left: 30px;
+  color: white;
+  font-size: x-large;
+}
+
+/*Reserves space for header and footer*/
+main {
+  padding-top: 5%;
+  padding-bottom: 6%;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.generalbody {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-color: #404040;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 40px;
+  color: green;
+}
+
+.arrow-left {
+  position: relative;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.arrow-right {
+  position: relative;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.picture-container {
+  position: relative;
+  display: flex;
+}
+
+.mystery-img {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Add the desired gap between images */
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.mystery-img img {
+  height: 168px;
+  width: 168px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure images maintain their aspect ratio */
+}/*# sourceMappingURL=showlist.css.map */
