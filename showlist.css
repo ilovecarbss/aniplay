@@ -142,7 +142,7 @@ body {
 h1 {
   font-size: 40px;
   font-weight: 300;
-  text-align: center;
+  text-align: left; /* Align the heading to the left */
   margin: 0 0 40px;
   color: green;
 }
@@ -150,7 +150,6 @@ h1 {
 .arrow-left {
   position: relative;
   top: 50%;
-  left: 5%;
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
@@ -181,25 +180,22 @@ h1 {
   opacity: 0.5;
 }
 
-.picture-container {
+.pictures-container {
   position: relative;
-  display: flex;
-}
-
-.mystery-img {
-  position: relative;
-  cursor: pointer;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px; /* Add the desired gap between images */
-  transition: 0.5s;
-  opacity: 0.5;
+  width: 800px;
+  height: 200px;
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
 }
 
-.mystery-img img {
+img {
   height: 168px;
-  width: 168px;
-  -o-object-fit: cover;
-     object-fit: cover; /* Ensure images maintain their aspect ratio */
+  width: 100%;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=showlist.css.map */
