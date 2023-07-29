@@ -209,7 +209,7 @@ img {
 }
 
 .div-container {
-  position: inherit;
+  position: flex;
   width: 50%;
   height: 50%;
 }/*# sourceMappingURL=showlist.css.map */
