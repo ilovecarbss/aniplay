@@ -168,8 +168,48 @@
     </div>
     </div>
     </div>
-    </main>
+    <div class="big-popup-container" id="popupContainer">
+      <div class="popup-container-right">
+        <div class="popup-content-container">
+          <div class="popup-content">
+            <img src="/pictures/re_zero.jpg" alt="">
+            <h2>Modern day teenage gamer, Natsuki Subaru, is thrust into a mysterious fantasy RPG styled world on his way home from a convenience store. As he searches for the heroine who he assumes summoned him he crosses paths with a silver haired half elf girl.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="popup-container-left">
+        <div class="popup-content-container">
+          <div class="popup-content">
+            <img src="/pictures/re_zero.jpg" alt="">
+            <h2>Modern day teenage gamer, Natsuki Subaru, is thrust into a mysterious fantasy RPG styled world on his way home from a convenience store. As he searches for the heroine who he assumes summoned him he crosses paths with a silver haired half elf girl.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-overlay" onclick="closePopup()"></div>
 
+    <!-- Trigger buttons to show the popups -->
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showRightPopup()">Show Right Popup</button>
+      <button onclick="showLeftPopup()">Show Left Popup</button>
+    </div>
+    </main>
+<script>
+    function showRightPopup() {
+      var popupContainer = document.getElementById("popupContainer");
+      popupContainer.classList.add("show");
+    }
+
+    function showLeftPopup() {
+      var popupContainer = document.getElementById("popupContainer");
+      popupContainer.classList.add("show");
+    }
+
+    function closePopup() {
+      var popupContainer = document.getElementById("popupContainer");
+      popupContainer.classList.remove("show");
+    }
+  </script>
 
     <!--Start of Footer-->
     <footer>
