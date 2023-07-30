@@ -2,122 +2,6 @@
 For example: headers,footers etc. 
 Will add here when i finish sorting out the design for header and footer */
 
-header {
-    background-color: #5526AF;
-    color: white;
-    padding: 20px;
-    width:100%;
-    height:5%;
-    display:none;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    position:fixed;
-    top:0;
-    z-index: 0
-    ;
-  }
-
-form {
-    text-align: center;
-    display: inline-block;
-  }
-.signup-button{
-    margin-right:40px;
-    color: white;
-    background: black;
-    
-  }
-
-.loginform-popup{ 
-      
-    border: black solid 2px;
-    display: none;
-    position: fixed;
-    bottom: 30%;
-    left:40%;
-    z-index: 9;
-  }
-.login-container{
-    max-width: 400px;
-    padding: 10px;
-    background-color:  #5526af;
-  }
-.login-container input[type=password], 
-.login-container input[type=text],
-.login-container input[type=email] {
-    background-color: white;
-    border: none;
-    width: 90%;
-    padding: 13px;
-    margin: 5px 0 22px 0;
-  }
-.login-container .bttn {
-    background-color: black;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }   
-.login-container .btn:hover, .open-button:hover { 
-    opacity: 1;
-  }
-#errorMsg{ /* error msg display if login fail */
-    color:red;
-    text-align: center;
-    font-size: 12px;
-    padding-bottom: 20px;
-}
-#errorsignMsg{ /*error message display if sign up fail */
-  color:red;
-  text-align: center;
-  font-size: 12px;
-  padding-bottom: 20px;
-
-}
-
-  footer {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    display: none;
-    justify-content: space-between;
-    text-align: center;
-    position:fixed;
-    bottom:0;
-    width:100%;
-    height:6%;
-  }
-
-.headfootnav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-.navspace{
-    padding-left:10px;
-  }
-
-
-#welcomebox{
-    font-weight: bolder;
-    font-size: auto;
-    text-align: center;
-    background-color: #5526AF;
-    color: white;
-    margin-left:30px;
-    height: 20%;
-    width:30%;
-    top:30%;
-    }
- #slogan{
-    margin-left: 30px;
-    color: white;
-    font-size:x-large;
- }
 
 /*Reserves space for header and footer*/
 main{
@@ -133,7 +17,6 @@ body{
       padding:0;
       background-size:cover;
       background-position:center center;
-      background-color: #404040;
 }
 
 h1 {
@@ -175,16 +58,17 @@ h1 {
 }
 .pictures-container{
   position: relative;
-  justify-content: space-between;
+  justify-content: normal;
   width: 800px;
   height: 200px;
   display: flex;
   overflow: hidden;
+  gap: 1.5em;
 }
 
 img{
-  height: auto;
-  width: auto;
+  height: 185px;
+  width: 185px;
 }
 .arrow-container{
   display: flex;
@@ -193,7 +77,7 @@ img{
   z-index: 0;
 }
 .big-div-container{
-  width: 250vh;
+  width: 200vh;
   height: 100%;
   display: flex;
 }
@@ -210,6 +94,7 @@ img{
   display: flex;
   overflow: hidden;
 }
+/* Main popup container */
 .big-popup-container {
   position: fixed;
   top: 0;
@@ -219,41 +104,37 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden; /* Hide the popup by default */
+  visibility: hidden; 
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 10;
 }
 
-/* Adjust the width and height of the popups as needed */
-.popup-container-right, .popup-container-left {
+/* Overlay styles */
+.popup-overlay {
   position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9; /* Place it below the popup content but inside the popup container */
+}
+
+/* Adjust the width and height of the popups as needed */
+.popup-container-left {
+  position: relative; /* position relative to the popup container */
   width: 60%;
   height: 60%;
   background-color: transparent;
 }
 
-.popup-container-right {
-  right: 20%;
-}
-
-.popup-container-left {
-  left: 20%;
-}
-
-/* Show the popup */
-.big-popup-container.show {
-  visibility: visible;
-  opacity: 1;
-}
-
 /* Container for the popup content */
 .popup-content-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative; /* position relative to the popup container */
+  width: 100%;
+  height: 100%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -262,26 +143,18 @@ img{
   justify-content: center;
 }
 
-/* Style for the popup content */
-.popup-content {
-  color: #fff;
-  text-align: center;
-  max-width: 100%; /* Ensure the content doesn't overflow */
+/* Show the popup and the overlay */
+.big-popup-container.show {
+  visibility: visible;
+  opacity: 1;
+}
+.big-popup-container, .popup-overlay {
+  visibility: hidden; 
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
-/* Overlay styles */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Lighter shade of color */
-  z-index: 5; /* Place it below the popup */
-  display: none; /* Hide it by default */
-}
-
-/* Show the overlay when the popup is visible */
-.big-popup-container.show + .popup-overlay {
-  display: block;
+.big-popup-container.show, .popup-overlay.show {
+  visibility: visible;
+  opacity: 1;
 }
