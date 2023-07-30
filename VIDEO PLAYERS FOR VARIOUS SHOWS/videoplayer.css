@@ -8,15 +8,26 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   
   /* Style the main container */
+  .vp-bigcontainer {
+   
+      width: 250vh;
+      height: 100%;
+      display: flex;
+      background-color:#404040;
+  }
+  
   .vp-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #404040;
   }
+
+
+
   /* Style the left section */
   .vp-left-section {
-    width: 60%; /* Each section takes 60% of the container width  */
+    width: 32%; /* Each section takes 60% of the container width  */
     background-color: black;
     padding: 20px;
     box-sizing: border-box;
@@ -26,7 +37,7 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   /* Styling the right sections */
   .vp-right-section {
-    width: 33%; /* Each section takes 30% of the container width  */
+    width: 48%; /* Each section takes 30% of the container width  */
     background-color: black;
     padding: 20px;
     box-sizing: border-box;
@@ -34,6 +45,21 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
     display: flex;
     flex-direction: column;
   }
+
+  .vp-left-container{
+    position: flex;
+    width: 60%;
+    height: 30%;
+    
+  }
+  .vp-right-container{
+    position: flex;
+    width: 30%;
+    height: 45%;
+  
+  }
+
+
 
   .vp-show-desc {
     display: flex;
