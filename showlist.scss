@@ -183,7 +183,7 @@ h1 {
 }
 
 img{
-  height: 168px;
+  height: auto;
   width: auto;
 }
 .arrow-container{
@@ -201,4 +201,12 @@ img{
   position: flex;
   width: 50%;
   height: 50%;
+}
+.pictures-container1{
+  position: relative;
+  justify-content: space-between;
+  width: 0;
+  height: 0;
+  display: flex;
+  overflow: hidden;
 }

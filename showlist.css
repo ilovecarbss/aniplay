@@ -154,8 +154,6 @@ h1 {
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background: #fff;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -171,8 +169,6 @@ h1 {
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background: #fff;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -191,7 +187,7 @@ h1 {
 }
 
 img {
-  height: 168px;
+  height: auto;
   width: auto;
 }
 
@@ -212,4 +208,13 @@ img {
   position: flex;
   width: 50%;
   height: 50%;
+}
+
+.pictures-container1 {
+  position: relative;
+  justify-content: space-between;
+  width: 0;
+  height: 0;
+  display: flex;
+  overflow: hidden;
 }/*# sourceMappingURL=showlist.css.map */
