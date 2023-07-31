@@ -64,12 +64,3 @@ function closeSignPop() {
 document.getElementById("SignPop").style.display = "none";
 }
 
-// The following is the JS for the leaderboard
-
-function handleButtonHover(button) {
-  button.style.backgroundColor = "#444"; 
-}
-
-function handleButtonClick(category) {
-console.log(`Button clicked: ${category}`);
-}
