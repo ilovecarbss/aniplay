@@ -19,82 +19,6 @@
 
 <body>
 
-  <!--Start of header-->
-  <header> 
-
-    <nav class="headfootnav">
-        
-    <a href="Main.html"><img src="pictures/aniplaylogo.png" alt="Main page link" style="height: 65px; width: auto"></a>
-
-    <div class="navspace">
-    <a href="showlist.html" style="color: white;">Show List</a>
-    </div>
-
-    <div class="navspace">
-    <a href="leaderboard.html" style="color: white;">Leaderboards</a>
-    </div>
-        
-    </nav>
-
-    <form action="#" method="get"> <!--Search bar-->
-    <input type="text" name="search" placeholder="Find a show...">
-    <button type="submit">Search</button>
-    </form>
-
-    <script> //search bar dummy search functionality
-    const search = document.getElementById('search');
-    const button = document.querySelector('button');
-    button.addEventListener('click', () => {
-    const query = search.value;
-    });
-    // perform search with query
-    </script>
-
-
-    <!--Button that on press, opens the login form Popup-->
-    <button onclick="openPop()" class="signup-button">Login</button>
-
-
-    <!-- Login form -->
-    <div class="loginform-popup" id="loginPop">
-    <form name="loginform" class="login-container" onsubmit="return Loginvalidate()" method="POST"> <!-- What the form does when pressed submit-->
-    <h1>Welcome Back!<br>Login</h1>
-
-    <label for="name"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="nameLog" name="name" required>
-    <label for="passw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="passLog" name="passw" required>
-
-    <button type="submit" class="bttn">Login</button>
-    <button type="button" class="bttn" onclick="closePop()">Close</button>
-    <div id="errorMsg"></div>
-
-    <!--Button leads to sign up,closes login-->
-    <h3>Dont have an account? <button type="button" onclick="SignupPop();closePop()" >Sign up</button></h3> 
-    </form>
-    </div>
-    
-    <!--Sign up form-->
-    <div class="loginform-popup" id="SignPop">
-    <form name="signupform" class="login-container" onsubmit="return Signupvalidate()" method="POST"> <!-- What the form does when pressed submit-->
-    <h1>Welcome To Aniplay!<br>Sign up</h1>
-  
-    <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Enter Email" id="emailSign" name="email" required>
-    <label for="name"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="nameSign" name="name" required>
-    <label for="passw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="passSign" name="passw" required>
-
-    <button type="submit" class="bttn" >Sign Up</button>
-    <button type="button" class="bttn" onclick="closeSignPop()">Close</button>
-    <div id="errorsignMsg"></div>
-   
-    </form>
-    </div>
-    </header> 
-    <!-- End Header-->
-    
     <!--Main content of main page-->
     <main>
       
@@ -105,12 +29,12 @@
     <svg class="arrow-left" viewBox="0 0 62 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.939335 10.9393C0.35355 11.5251 0.35355 12.4749 0.939335 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939335 10.9393ZM62 10.5L2 10.5V13.5L62 13.5V10.5Z" fill="black"/>
       </svg> 
-    <div class="pictures-container">
-    <img src="/pictures/shawli_fantasy.jpg" alt="">
-    <img src="/pictures/blade_runner.png" alt="">
-    <img src="/pictures/black_clover.jpg" alt="">
-    <img src="/pictures/demon_blade.jpg" alt="">
-  </div>
+      <div class="pictures-container">
+        <img src="/pictures/shawli_fantasy.jpg" alt="" onclick="showPopup('/pictures/shawli_fantasy.png')">
+        <img src="/pictures/blade_runner.png" alt="" onclick="showPopup('/pictures/blade_runner.jpeg')">
+        <img src="/pictures/black_clover.jpg" alt="" onclick="showPopup('/pictures/black_clover.jpg')">
+        <img src="/pictures/demon_blade.jpg" alt="" onclick="showPopup('/pictures/collar_malice.jpg')">
+    </div>
     <svg class="arrow-right" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M52.0607 13.0607C52.6464 12.4749 52.6464 11.5251 52.0607 10.9393L42.5147 1.3934C41.9289 0.807611 40.9792 0.807611 40.3934 1.3934C39.8076 1.97919 39.8076 2.92893 40.3934 3.51472L48.8787 12L40.3934 20.4853C39.8076 21.0711 39.8076 22.0208 40.3934 22.6066C40.9792 23.1924 41.9289 23.1924 42.5147 22.6066L52.0607 13.0607ZM0 13.5H51V10.5H0V13.5Z" fill="black"/>
       </svg>
@@ -121,10 +45,10 @@
       <path d="M0.939335 10.9393C0.35355 11.5251 0.35355 12.4749 0.939335 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939335 10.9393ZM62 10.5L2 10.5V13.5L62 13.5V10.5Z" fill="black"/>
       </svg> 
     <div class="pictures-container">
-    <img src="/pictures/oshi_no_ko.jpg" alt="">
-    <img src="/pictures/seraph_of_the_end.jpg" alt="">
-    <img src="/pictures/kawamoto.jpg" alt="">
-    <img src="/pictures/kaguya.jpg" alt="">
+    <img src="/pictures/oshi_no_ko.jpg" alt="" onclick="showPopup('/pictures/oshi_no_ko.jpg')">
+    <img src="/pictures/seraph_of_the_end.jpg" alt="" onclick="showPopup('/pictures/seraph_of_the_end.jpg')">
+    <img src="/pictures/kawamoto.jpg" alt="" onclick="showPopup('/pictures/kawamoto.jpg')">
+    <img src="/pictures/kaguya.jpg" alt="" onclick="showPopup('/pictures/kaguya.jpg')">
     </div>
     <svg class="arrow-right" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M52.0607 13.0607C52.6464 12.4749 52.6464 11.5251 52.0607 10.9393L42.5147 1.3934C41.9289 0.807611 40.9792 0.807611 40.3934 1.3934C39.8076 1.97919 39.8076 2.92893 40.3934 3.51472L48.8787 12L40.3934 20.4853C39.8076 21.0711 39.8076 22.0208 40.3934 22.6066C40.9792 23.1924 41.9289 23.1924 42.5147 22.6066L52.0607 13.0607ZM0 13.5H51V10.5H0V13.5Z" fill="black"/>
@@ -136,10 +60,10 @@
       <path d="M0.939335 10.9393C0.35355 11.5251 0.35355 12.4749 0.939335 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939335 10.9393ZM62 10.5L2 10.5V13.5L62 13.5V10.5Z" fill="black"/>
       </svg>
       <div class="pictures-container">
-    <img src="/pictures/chainsaw_man.png" alt="">
-    <img src="/pictures/rent_a_girlfriend.jpeg" alt="">
-    <img src="/pictures/re_zero.jpg" alt="">
-    <img src="/pictures/collar_malice.jpg" alt="">
+        <img src="/pictures/chainsaw_man.png" alt="" onclick="showPopup('/pictures/chainsaw_man.png')">
+        <img src="/pictures/rent_a_girlfriend.jpeg" alt="" onclick="showPopup('/pictures/rent_a_girlfriend.jpeg')">
+        <img src="/pictures/re_zero.jpg" alt="" onclick="showPopup('/pictures/re_zero.jpg')">
+        <img src="/pictures/collar_malice.jpg" alt="" onclick="showPopup('/pictures/collar_malice.jpg')">
     </div>
     <svg class="arrow-right" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M52.0607 13.0607C52.6464 12.4749 52.6464 11.5251 52.0607 10.9393L42.5147 1.3934C41.9289 0.807611 40.9792 0.807611 40.3934 1.3934C39.8076 1.97919 39.8076 2.92893 40.3934 3.51472L48.8787 12L40.3934 20.4853C39.8076 21.0711 39.8076 22.0208 40.3934 22.6066C40.9792 23.1924 41.9289 23.1924 42.5147 22.6066L52.0607 13.0607ZM0 13.5H51V10.5H0V13.5Z" fill="black"/>
@@ -163,7 +87,7 @@
     <h1>Top Game World</h1>
     <div class="pictures-container">
     <img src="/pictures/kakegui.jpeg" alt="">
-    <img src="/pictures/noblesse.jpeg" alt="">
+    <img src="/pictures/nobleseimg.jpg" alt="">
     <img src="/pictures/gasaraki.jpg" alt="">
     </div>
     </div>
@@ -172,20 +96,13 @@
       <div class="popup-container-right">
         <div class="popup-content-container">
           <div class="popup-content">
-            <img src="/pictures/re_zero.jpg" alt="">
-            <h2>Modern day teenage gamer, Natsuki Subaru, is thrust into a mysterious fantasy RPG styled world on his way home from a convenience store. As he searches for the heroine who he assumes summoned him he crosses paths with a silver haired half elf girl.</h2>
-          </div>
-        </div>
-      </div>
-      <div class="popup-container-left">
-        <div class="popup-content-container">
-          <div class="popup-content">
-            <img src="/pictures/re_zero.jpg" alt="">
+            <img id="popupImage" src="/pictures/re_zero.jpg" alt="">
             <h2>Modern day teenage gamer, Natsuki Subaru, is thrust into a mysterious fantasy RPG styled world on his way home from a convenience store. As he searches for the heroine who he assumes summoned him he crosses paths with a silver haired half elf girl.</h2>
           </div>
         </div>
       </div>
     </div>
+  
     <div class="popup-overlay" onclick="closePopup()"></div>
 
     <!-- Trigger buttons to show the popups -->
@@ -193,52 +110,33 @@
       <button onclick="showRightPopup()">Show Right Popup</button>
       <button onclick="showLeftPopup()">Show Left Popup</button>
     </div>
-    </main>
-<script>
-    function showRightPopup() {
+    <script>
+      function showPopup(imageUrl) {
+          var popupContainer = document.getElementById("popupContainer");
+          var popupImage = document.getElementById("popupImage");
+  
+          popupImage.src = imageUrl;
+          popupContainer.classList.add("show");
+      }
+  
+      function closePopup() {
+          var popupContainer = document.getElementById("popupContainer");
+          popupContainer.classList.remove("show");
+      }
+  
+      // Event listener for the overlay
       var popupContainer = document.getElementById("popupContainer");
-      popupContainer.classList.add("show");
-    }
-
-    function showLeftPopup() {
-      var popupContainer = document.getElementById("popupContainer");
-      popupContainer.classList.add("show");
-    }
-
-    function closePopup() {
-      var popupContainer = document.getElementById("popupContainer");
-      popupContainer.classList.remove("show");
-    }
+      popupContainer.addEventListener("click", function (event) {
+          // Check if the clicked element is the container itself, indicating a click on the overlay
+          var isOverlayClick = event.target === event.currentTarget;
+          if (isOverlayClick) {
+              closePopup();
+          }
+      });
   </script>
+  
+    </main>
 
-    <!--Start of Footer-->
-    <footer>
-
-    <nav class = "headfootnav">
-    <div class="navspace">
-    <a href="https://www.facebook.com/"><img src="pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
-    </div>
-
-    <div class="navspace">
-    <a href="https://www.twitter.com/"><img src="pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
-    </div>
-
-    <div class="navspace">
-    <a href="https://www.reddit.com/"><img src="pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
-    </div>
-    </nav>
-
-    <div style="display: flex; align-items: center; padding-right:30px;">
-    <button>Info and Credits</button>
-
-    <div class="navspace">
-    <img src="pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
-    </div>
-
-    </div>
-    </nav> 
-    </footer>
-    <!--End footer-->
-
+    
 </body>
 </html>
