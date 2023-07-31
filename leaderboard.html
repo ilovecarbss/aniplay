@@ -31,6 +31,14 @@
   margin-top: 10px;
 }
 
+.categorynav:hover {
+  background-color: #5526af;
+  cursor: pointer;
+}
+
+.categorynav:active {
+  background-color: #222;
+}
 
 .show-ranking-table {
   width: 650px; 
@@ -103,12 +111,28 @@ tr:hover {
 
 .genboard {
   width: 378px;
-  height: 50px;
+  height: 80px;
   background-color: black;
   position: absolute;
   top: 50px;
   right:50px;
   margin-top: 505px;
+} 
+
+.wrn {
+  width: 125px;
+  height: 30px;
+  background-color: #5526af;
+  color: white;
+  font-family: Arial;
+  font-size: 16px;
+  position: absolute;
+  top: 50px;
+  right: 175px;
+  margin-top: 540px;
+  display: flex;
+  justify-content: center; 
+  align-items: center
 }
 
 
@@ -200,11 +224,11 @@ tr:hover {
     <main>
 <table class="fixed_headers" style=" width: 861px; text-align: center; ">
   <div class="container">
-    <button class="categorynav">Day</button>
-    <button class="categorynav">Week</button>
-    <button class="categorynav">Month</button>
-    <button class="categorynav">Year</button>
-    <button class="categorynav">All Time</button>
+    <button class="categorynav"onclick="handleButtonClick('Day')">Day</button>
+    <button class="categorynav"onclick="handleButtonClick('Week')">Week</button>
+    <button class="categorynav"onclick="handleButtonClick('Month')">Month</button>
+    <button class="categorynav"onclick="handleButtonClick('Year')">Year</button>
+    <button class="categorynav"onclick="handleButtonClick('All Time')">All Time</button>
   </div>
 
   <table class="show-ranking-table">
@@ -274,8 +298,7 @@ tr:hover {
 <div class="showinformation"></div>
 <div class="movietitlesmol"></div>
 <div class="genboard"></div>
-
-
+<div class="wrn">Watch Now</div>
 
 
 
