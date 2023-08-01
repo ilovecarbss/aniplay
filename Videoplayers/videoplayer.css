@@ -9,55 +9,78 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   
   /* Style the main container */
   .vp-bigcontainer {
-   
-      width: 250vh;
+      
+      width: 100%;
       height: 100%;
       display: flex;
       background-color:#404040;
   }
   
-  .vp-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #404040;
-  }
-
-
-
-  /* Style the left section */
-  .vp-left-section {
-    width: 32%; /* Each section takes 60% of the container width  */
-    background-color: black;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  /* Styling the right sections */
-  .vp-right-section {
-    width: 48%; /* Each section takes 30% of the container width  */
-    background-color: black;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .vp-left-container{
+  .vp-left-container {
     position: flex;
-    width: 60%;
-    height: 30%;
-    
-  }
-  .vp-right-container{
-    position: flex;
-    width: 30%;
-    height: 45%;
+    width: 100%;
+    height: 50%;
   
   }
+
+  .vp-right-container {
+    position: flex;
+    width: 100%;
+    height: 50%;
+    margin-left: 22em;
+    padding-top: 20px;
+    
+  }
+
+  /* Left Side Top */
+  .vp-left-section1 {
+    width: 150%; /* Each section takes 60% of the container width  */
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+
+
+  .vp-left-section2 {
+    width: 150%; /* Make it span the entire container width */
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .vp-left-section3 {
+  width: 150%; /* Each section takes 100% of the container width  */
+  background-color: black; /* Change the background color for the third container */
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 20px; /* Add margin at the top to create space between the sections */
+  display: flex;
+  flex-direction: column;
+    
+  }
+
+
+
+  /* Styling the right sections */
+  .vp-right-section {
+    width: 100%; /* Each section takes 30% of the container width  */
+    height: 300px;
+    background-color: black;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
 
 
 
@@ -102,6 +125,7 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   
   .vp-titlebar {
+    margin-bottom: 10px;
     width: 100%;
     height: 30px;
     background-color: #5526af;
@@ -171,4 +195,11 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   
   .recommended-show p {
     flex: 1;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    position: inherit;
   }
