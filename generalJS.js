@@ -20,7 +20,7 @@
     }
 
     else {
-      alert("Successfully logged in");
+      confirm("Welcome back, " + name +"!");
       return true;
     }
   }
