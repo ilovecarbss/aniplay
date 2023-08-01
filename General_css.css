@@ -24,9 +24,14 @@ form {
   }
 .signup-button{
     margin-right:40px;
+    background-color: black;
     color: white;
-    background: black;
   }
+.postsignup-button{
+  background-color: #5526AF;
+  margin-right: 45px;
+  color: white;
+}
 
 .loginform-popup{ 
       
