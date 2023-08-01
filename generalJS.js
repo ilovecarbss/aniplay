@@ -1,12 +1,14 @@
 //General js functions used by multiple sites
 
 //Script for login form and signup form
+  
 
 
   //login form script
   function Loginvalidate() {
     var name = document.getElementById("nameLog").value;
     var password = document.getElementById("passLog").value;
+    
 
   //if username or password field empty, or password is shorter than 8 characters, output error
     if (name == "" || password == "") { 
@@ -16,6 +18,11 @@
 
     else if (password.length < 8) {
       document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+      return false;
+    }
+
+    else if (name != Accname ||  password != Accpass) {
+      document.getElementById("errorMsg").innerHTML = "Account details incorrect!"
       return false;
     }
 
@@ -42,11 +49,12 @@
     }
     else {
       //reloads the page after user presses ok on alert
-  confirm("Successfully signed up")
+      confirm("Successfully signed up")
       return true;
-  
     }
+
   }
+ 
   
 
 
