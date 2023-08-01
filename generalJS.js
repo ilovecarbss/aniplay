@@ -64,3 +64,14 @@ function closeSignPop() {
 document.getElementById("SignPop").style.display = "none";
 }
 
+// functions for leaderboard
+// Function to handle the button click
+function handleButtonClick(button) {
+  // Toggle the 'active' class to change the background color
+  button.classList.toggle('active');
+}
+
+function handleButtonClick(rank) {
+  // Replace this with your desired logic when the button is clicked
+  console.log("Button clicked for rank:", rank);
+}

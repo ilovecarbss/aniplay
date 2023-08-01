@@ -37,7 +37,13 @@
 }
 
 .categorynav:active {
-  background-color: #222;
+  background-color: #5526af;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .show-ranking-table {
@@ -76,7 +82,26 @@
 
 
 tr:hover {
-  background-color: #5526af; 
+  background-color: #5526af;
+  cursor: pointer; 
+}
+
+.show-ranking-button {
+  /* Make the anchor tag look like a button */
+  display: block; /* Block-level element to take full width */
+  width: 650px;
+  text-decoration: none; /* Remove underline for the link */
+  padding: 0; /* Remove padding to make it visually look like a button */
+  border: none; /* Remove border to make it visually look like a button */
+  background-color: black;
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.show-ranking-button:hover {
+  /* Add a hover effect to the button */
+  background-color: #5526af;
 }
 
 .videoscreen {
@@ -87,6 +112,11 @@ tr:hover {
   top: 50px;
   right: 50px;
   margin-top: 90px;
+}
+
+.play-button {
+  width: 20px; 
+  height: 20px;
 }
 
 .showinformation {
@@ -221,77 +251,110 @@ tr:hover {
     <main>
 <table class="fixed_headers" style=" width: 861px; text-align: center; ">
   <div class="container">
-<button class="categorynav">Day</button>
-<button class="categorynav">Week</button>
-<button class="categorynav">Month</button>
-<button class="categorynav">Year</button>
-<button class="categorynav">All Time</button>
+    <button class="categorynav" onclick="handleButtonClick('Day')" onmouseover="handleButtonHover(this)">Day</button>
+    <button class="categorynav" onclick="handleButtonClick('Week')" onmouseover="handleButtonHover(this)">Week</button>
+    <button class="categorynav" onclick="handleButtonClick('Month')" onmouseover="handleButtonHover(this)">Month</button>
+    <button class="categorynav" onclick="handleButtonClick('Year')" onmouseover="handleButtonHover(this)">Year</button>
+    <button class="categorynav" onclick="handleButtonClick('All Time')" onmouseover="handleButtonHover(this)">All Time</button>
   </div>
 
-  <table class="show-ranking-table">
-    <tr>
-      <td class="show-rank">1.</td>
-      <td class="show-title">CHAINSAW MAN</td>
-    </tr>
-  </table>
+  <a href="#" class="show-ranking-button">
+    <table class="show-ranking-table">
+      <tr>
+        <td class="show-rank">1.</td>
+        <td class="show-title">CHAINSAW MAN</td>
+      </tr>
+    </table>
+  </a>
 
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
       <td class="show-rank">2.</td>
       <td class="show-title">TOKYO REVENGERS</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">3.</td>
     <td class="show-title">JUJUTSU KAISEN</td>
     </tr>
+  </table>
+  </a>
+  
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">4.</td>
     <td class="show-title">SPY X FAMILY</td>
     </tr>
+  </table>
+  </a>
+  
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">5.</td>
     <td class="show-title">ATTACK ON TITAN</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button"> 
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">6.</td>
     <td class="show-title">DEMON SLAYER</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">7.</td>
     <td class="show-title">BLACK CLOVER</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">8.</td>
     <td class="show-title">FULLMETAL ALCHEMIST</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">9.</td>
     <td class="show-title">MY HERO ACADEMIA</td>
     </tr>
+  </table>
+  </a>
 
+  <a href="#" class="show-ranking-button">
   <table class="show-ranking-table">
     <tr>
     <td class="show-rank">10.</td>
     <td class="show-title">NARUTO: SHIPPUDEN</td>
     </tr>
 </table>
+</a>
 
-<div class="videoscreen"></div>
+
+<div class="videoscreen">
+  <img src="playbutton.png" alt="Play" class="play-button">
+</div>
 <div class="showinformation"></div>
 <div class="movietitlesmol"></div>
 <div class="genboard"></div>
