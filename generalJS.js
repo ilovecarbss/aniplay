@@ -112,3 +112,35 @@ function handleButtonClick(rank) {
   console.log("Button clicked for rank:", rank);
 }
 
+
+//functions for the credits page
+//function to open the contact form pop-up
+function openContactForm() {
+  document.getElementById("contactFormContainer").style.display = "block";
+}
+
+// Function to close the contact form pop-up
+function closeContactForm() {
+  document.getElementById("contactFormContainer").style.display = "none";
+}
+
+// Function to validate the form fields
+function validateContactForm() {
+  const name = document.getElementById("contactname").value;
+  const email = document.getElementById("contactemail").value;
+  const message = document.getElementById("contactmessage").value;
+
+  // Simple email validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Check if fields are not empty and email format is valid
+  if (name.trim() === "" || email.trim() === "" || message.trim() === "" || !emailPattern.test(email)) {
+      confirm("Please fill in all fields with valid information.");
+      return false; // Prevent form submission
+  }
+
+  // If validation passes, close the contact form pop-up
+  closeContactForm();
+  alert("Message sent!");
+  return true; // Allow form submission
+}
