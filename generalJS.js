@@ -64,6 +64,42 @@ function closeSignPop() {
 document.getElementById("SignPop").style.display = "none";
 }
 
+
+//changes the pictures and url of the trending now section of main page
+function chgTrendimg1(){
+  document.getElementById("trendimg").src="pictures/suzume.jpg";
+  var link = document.getElementById("trendurl");
+        link.setAttribute("href", "Videoplayers/SUZUME/suzume.html");
+        return false;
+}
+function chgTrendimg2(){
+  document.getElementById("trendimg").src="pictures/narutoshippuden.jpg";
+  var link = document.getElementById("trendurl");
+        link.setAttribute("href", "Videoplayers/NARUTOSHIPPUDEN/narutoE1.html");
+        return false;
+}
+
+function chgTrendimg3(){
+  document.getElementById("trendimg").src="pictures/tokyorevengers.jpg";
+  var link = document.getElementById("trendurl");
+        link.setAttribute("href", "Videoplayers/TOKYOREVENGERS/tokyoE1.html");
+        return false;
+}
+
+function chgTrendimg4(){
+  document.getElementById("trendimg").src="pictures/chainsaw_man.png";
+  var link = document.getElementById("trendurl");
+        link.setAttribute("href", "Videoplayers/CHAINSAW/chainE1.html");
+        return false;
+}
+
+function chgTrendimg5(){
+  document.getElementById("trendimg").src="pictures/re_zero.jpg";
+  var link = document.getElementById("trendurl");
+        link.setAttribute("href", "Videoplayers/REZER/rze1.html");
+        return false;
+}
+
 // functions for leaderboard
 // Function to handle the button click
 function handleButtonClick(button) {
@@ -75,3 +111,4 @@ function handleButtonClick(rank) {
   // Replace this with your desired logic when the button is clicked
   console.log("Button clicked for rank:", rank);
 }
+
