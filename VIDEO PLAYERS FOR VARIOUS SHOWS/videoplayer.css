@@ -197,9 +197,6 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
     flex: 1;
   }
 
-  video {
-    width: 100%;
-    height: auto;
-    background-color: #000;
-    position: inherit;
-  }
+ video {
+  overflow: auto;
+ }
