@@ -2,21 +2,22 @@
 For example: headers,footers etc. 
 Will add here when i finish sorting out the design for header and footer */
 
-
 /*Reserves space for header and footer*/
-main{
-    padding-top: 5%;
-    padding-bottom: 6%;
-  }
-body{
-    font-family: 'Roboto';
+main {
+  padding-top: 5%;
+  padding-bottom: 6%;
+}
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
 }
 
-.generalbody{
+.generalbody {
   margin: 0;
-      padding:0;
-      background-size:cover;
-      background-position:center center;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
 }
 
 h1 {
@@ -27,66 +28,76 @@ h1 {
   color: green;
 }
 
+.arrow-left {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.arrow-right {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0.5;
+}
 
-.arrow-left{
-  position: relative;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+.carousel {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  opacity: 0.5;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
 }
-.arrow-right{
-  position: relative;
-  top: 50%;
-  left: 5%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  opacity: 0.5;
-  
-}
-.pictures-container{
+.pictures-container {
   position: relative;
   justify-content: normal;
+  /*
   width: 800px;
   height: 200px;
+  */
   display: flex;
   overflow: hidden;
   gap: 1.5em;
 }
 
-img{
-  height: 185px;
-  width: 185px;
+img {
+  height: 160px;
+  width: 160px;
 }
-.arrow-container{
+.arrow-container {
   display: flex;
   align-items: center;
-  margin-left: 30px;
   z-index: 0;
+  gap: 24px;
 }
-.big-div-container{
-  width: 200vh;
+.big-div-container {
+  width: 100%;
   height: 100%;
   display: flex;
 }
 .div-container{
-  position: flex;
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 50%;
+  margin-left: 4rem;
 }
-.pictures-container1{
+.div-container1{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-left: 4rem;
+}
+.pictures-container1 {
   position: relative;
   justify-content: space-between;
   width: 0;
@@ -104,7 +115,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 10;
@@ -118,7 +129,7 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9; /* Place it below the popup content but inside the popup container */
 }
 
@@ -148,13 +159,15 @@ img{
   visibility: visible;
   opacity: 1;
 }
-.big-popup-container, .popup-overlay {
-  visibility: hidden; 
+.big-popup-container,
+.popup-overlay {
+  visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-.big-popup-container.show, .popup-overlay.show {
+.big-popup-container.show,
+.popup-overlay.show {
   visibility: visible;
   opacity: 1;
 }
