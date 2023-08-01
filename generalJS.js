@@ -20,7 +20,7 @@
     }
 
     else {
-      confirm("Successfully logged in");
+      alert("Successfully logged in");
       return true;
     }
   }
@@ -136,10 +136,10 @@ function validateContactForm() {
   // Check if fields are not empty and email format is valid
   if (name.trim() === "" || email.trim() === "" || message.trim() === "" || !emailPattern.test(email)) {
       confirm("Please fill in all fields with valid information.");
-      return false; // Prevent form submission
+      return false; 
   }
 
-  // If validation passes, close the contact form pop-up
+  // If validation passes, close the contact form
   closeContactForm();
   alert("Message sent!");
   return true; // Allow form submission
