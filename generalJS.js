@@ -1,27 +1,35 @@
 //General js functions used by multiple sites
 
 //Script for login form and signup form
+  
 
 
   //login form script
   function Loginvalidate() {
     var name = document.getElementById("nameLog").value;
     var password = document.getElementById("passLog").value;
+    
+    
 
   //if username or password field empty, or password is shorter than 8 characters, output error
     if (name == "" || password == "") { 
-      document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+      document.getElementById("errorMsg").innerHTML = "Please fill the required fields";
       return false;
     }
 
     else if (password.length < 8) {
-      document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+      document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters";
       return false;
     }
 
+
     else {
-      confirm("Successfully logged in");
-      return true;
+      document.getElementById("headerbutton").className = "postsignup-button";
+      document.getElementById("headerbutton").innerHTML = name;
+      confirm("Welcome back, " + name +"!");
+      document.getElementById("loginPop").style.display = "none";
+      return false;
+      
     }
   }
 
@@ -42,11 +50,13 @@
     }
     else {
       //reloads the page after user presses ok on alert
-  confirm("Successfully signed up")
+
+      confirm("Successfully signed up")
       return true;
-  
     }
+
   }
+ 
   
 
 
@@ -115,3 +125,35 @@ function handleButtonClick(rank) {
 
 
 
+
+//functions for the credits page
+//function to open the contact form pop-up
+function openContactForm() {
+  document.getElementById("contactFormContainer").style.display = "block";
+}
+
+// Function to close the contact form pop-up
+function closeContactForm() {
+  document.getElementById("contactFormContainer").style.display = "none";
+}
+
+// Function to validate the form fields
+function validateContactForm() {
+  const name = document.getElementById("contactname").value;
+  const email = document.getElementById("contactemail").value;
+  const message = document.getElementById("contactmessage").value;
+
+  // Simple email validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Check if fields are not empty and email format is valid
+  if (name.trim() === "" || email.trim() === "" || message.trim() === "" || !emailPattern.test(email)) {
+      confirm("Please fill in all fields with valid information.");
+      return false; 
+  }
+
+  // If validation passes, close the contact form
+  closeContactForm();
+  alert("Message sent!");
+  return true; // Allow form submission
+}

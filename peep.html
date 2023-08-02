@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .carousel {
+      width: 900px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .carousel-items {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: max-content;
+    }
+
+    .carousel-items img {
+      width: 300px;
+      height: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      bottom: -30px;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="carousel1" class="carousel">
+    <div id="carousel-items1" class="carousel-items">
+        <img src="/pictures/black_clover.jpg" alt="Image 1">
+        <img src="/pictures/blade_runner.png" alt="Image 2">
+        <img src="/pictures/demon_blade.jpg" alt="Image 3">
+        <img src="/pictures/hell.jpg" alt="Image 4">
+        <img src="/pictures/oshi_no_ko.jpg" alt="Image 5">
+        <img src="/pictures/dawn_of_the_witch.jpg" alt="Image 6">
+    </div>
+    <button id="prev1" class="prev">svg_for_arrow1</button>
+    <button id="next1" class="next">svg_for_arrow1</button>
+  </div>
+
+  <div id="carousel2" class="carousel">
+    <div id="carousel-items2" class="carousel-items">
+        <img src="/pictures/black_clover.jpg" alt="Image 1">
+        <img src="/pictures/blade_runner.png" alt="Image 2">
+        <img src="/pictures/demon_blade.jpg" alt="Image 3">
+        <img src="/pictures/hell.jpg" alt="Image 4">
+        <img src="/pictures/oshi_no_ko.jpg" alt="Image 5">
+        <img src="/pictures/dawn_of_the_witch.jpg" alt="Image 6">
+    </div>
+    <button id="prev2" class="prev">svg_for_arrow2</button>
+    <button id="next2" class="next">svg_for_arrow2</button>
+  </div>
+
+  <div id="carousel3" class="carousel">
+    <div id="carousel-items3" class="carousel-items">
+        <img src="/pictures/black_clover.jpg" alt="Image 1">
+        <img src="/pictures/blade_runner.png" alt="Image 2">
+        <img src="/pictures/demon_blade.jpg" alt="Image 3">
+        <img src="/pictures/hell.jpg" alt="Image 4">
+        <img src="/pictures/oshi_no_ko.jpg" alt="Image 5">
+        <img src="/pictures/dawn_of_the_witch.jpg" alt="Image 6">
+    </div>
+    <button id="prev3" class="prev">svg_for_arrow3</button>
+    <button id="next3" class="next">svg_for_arrow3</button>
+  </div>
+
+  <script>
+    // Iterate over each carousel
+    for(let i = 1; i <= 3; i++) {
+      let index = 0;
+      const imgWidth = 300;
+
+      const nextBtn = document.getElementById(`next${i}`);
+      const prevBtn = document.getElementById(`prev${i}`);
+      const carouselItems = document.getElementById(`carousel-items${i}`);
+
+      nextBtn.addEventListener('click', function () {
+        index++;
+        moveCarousel();
+      });
+
+      prevBtn.addEventListener('click', function () {
+        index--;
+        moveCarousel();
+      });
+
+      function moveCarousel() {
+        if (index < 0) {
+          index = carouselItems.children.length - 3;
+        } else if (index > carouselItems.children.length - 3) {
+          index = 0;
+        }
+
+        carouselItems.style.transform = `translateX(${-index * imgWidth}px)`;
+      }
+    }
+  </script>
+</body>
+</html>
