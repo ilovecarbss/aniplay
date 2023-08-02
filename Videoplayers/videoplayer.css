@@ -101,7 +101,7 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   /* Styling the right sections */
   .vp-right-section2 {
     /* Each section takes 30% of the container width  */
-    height: 570px;
+    height: 600px;
     background-color: black;
     padding: 9px;
     box-sizing: border-box;
