@@ -478,12 +478,17 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
 @media screen and (max-width: 850px) { /*viewport for under 850px*/
   .vp-bigcontainer{
     display:none;
+    width:90%;
   }
-  .vp-left-container .vp-right-container {
-    width: 95%;
+  .vp-left-container{
+    width:90%
    /* The width is 80% when the viewport is 850px or smaller */
   }
+  .vp-right-container{
+    width:90%;
+  }
   
+
  
   }
   
