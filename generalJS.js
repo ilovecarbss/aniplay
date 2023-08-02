@@ -112,3 +112,6 @@ function handleButtonClick(rank) {
   console.log("Button clicked for rank:", rank);
 }
 
+
+
+

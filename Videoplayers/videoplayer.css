@@ -10,35 +10,38 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   /* Style the main container */
   .vp-bigcontainer {
       
-      width: 100%;
-      height: 100%;
+      
       display: flex;
       background-color:#404040;
   }
   
+ 
+
   .vp-left-container {
-    position: flex;
-    width: 100%;
-    height: 50%;
+    float: left;
+    height: 80%;
+    width: 70%;
+    background-color: #404040;
+    padding: 20px;
   
   }
 
+
   .vp-right-container {
-    position: flex;
-    width: 100%;
-    height: 50%;
-    margin-left: 22em;
-    padding-top: 20px;
-    
+    float: right;
+    width: 20em;
+    background-color: #404040;
+    padding: 50px;
+  
   }
 
   /* Left Side Top */
   .vp-left-section1 {
-    width: 150%; /* Each section takes 60% of the container width  */
-    background-color: black;
-    padding: 20px;
+    width: 100%; /* Each section takes 60% of the container width  */
+    background-color: #404040;
+    padding: 30px;
     box-sizing: border-box;
-    margin-top: 20px;
+    
     display: flex;
     flex-direction: column;
    
@@ -47,39 +50,72 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
 
 
   .vp-left-section2 {
-    width: 150%; /* Make it span the entire container width */
+    width: 100%; /* Each section takes 60% of the container width  */
     background-color: black;
+    padding: 10px;
     box-sizing: border-box;
-    margin-top: 20px;
+    
     display: flex;
     flex-direction: column;
     
   }
 
   .vp-left-section3 {
-  width: 150%; /* Each section takes 100% of the container width  */
+  width: 100%; /* Each section takes 100% of the container width  */
   background-color: black; /* Change the background color for the third container */
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
-  margin-top: 20px; /* Add margin at the top to create space between the sections */
+  margin-top: 10px; /* Add margin at the top to create space between the sections */
   display: flex;
   flex-direction: column;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  /* align-items: center; */
     
+  }
+
+  .vp-new-comments {
+    margin-top: 10px; /* Add some space between the comments area and the previous content */
+  }
+  
+
+
+
+
+  .vp-right-section1 {
+    width: 110%; /* Each section takes 30% of the container width  */
+    height: 500px;
+    background-color: black;
+    padding: 9px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
   }
 
 
 
   /* Styling the right sections */
-  .vp-right-section {
-    width: 100%; /* Each section takes 30% of the container width  */
-    height: 300px;
+  .vp-right-section2 {
+    width: 110%; /* Each section takes 30% of the container width  */
+    height: 570px;
     background-color: black;
-    padding: 30px;
+    padding: 9px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
+    margin-right: 2em;
+    padding-top: 20px;
   }
+
+
+  img {
+    float: left;
+    margin-right: 20px; /* Optional: Add some spacing between the image and the synopsis */
+  }
+
 
 
 
@@ -97,6 +133,8 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   
   .vp-synopsis {
     flex: 1;
+    background-color: black;
+    display: inline-block;
   }
 
   .vp-comments h3 {
@@ -110,8 +148,9 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   
   .premade-comment {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-bottom: 10px;
+    margin-top: 1px;
   }
   .premade-comment img {
     width: 30px; /* Adjust the size of the comment icons as needed */
@@ -125,9 +164,23 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   
   .vp-titlebar {
+    
     margin-bottom: 10px;
     width: 100%;
-    height: 30px;
+    height: 50px;
+    background-color: #5526af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .vp-titlebar1 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 70px;
     background-color: #5526af;
     display: flex;
     align-items: center;
@@ -136,15 +189,19 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
     font-size: 18px;
   }
   
-  .vp-episode-numbers {
-    display: flex;
-  }
   
+  .vp-episode-numbers {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    background-color: black;
+  }
+
   .episode-no {
     width: 50px;
     height: 50px;
-    background-color: #8b63d3;
-    color: #fff;
+    background-color: white;
+    color: black;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -152,19 +209,34 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
     margin-right: 10px;
     cursor: pointer;
   }
+
+  .episode-no.selected{
+    background-color: #5526af;
+    position: relative;
+    
+  }
   
   .episode-no:last-child {
     margin-right: 0;
   }
+
+  .episode-no:hover {
+    background-color: #955bff; /* Change to the desired hover color */
+  }
+
+  .category:hover {
+    background-color: black; /* Change the background color to your desired hover color */
+    color: #5526af; /* Change the text color to your desired hover color */
+  }
   
   .also-watch {
-    margin-top: 20px;
+    margin-top: 5px;
     flex: 1;
   }
   
   .also-watch .vp-titlebar {
     width: 100%;
-    height: 30px;
+    height: 40px;
     background-color: #5526af;
     display: flex;
     align-items: center;
@@ -179,9 +251,10 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   
   .recommended-show {
-    width: calc(50% - 10px);
+    text-align: center;
     background-color: black;
-    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
     box-sizing: border-box;
     margin: 5px;
     display: flex;
@@ -189,8 +262,9 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
   }
   
   .recommended-show img {
-    width: 60px; /* Adjust the size of the show images as needed */
+    width: 80px; /* Adjust the size of the show images as needed */
     margin-right: 10px;
+    height: auto;
   }
   
   .recommended-show p {
@@ -200,3 +274,207 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
  video {
   overflow: auto;
  }
+
+ .category {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: black;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* Show the selected category with a different background color */
+.category.selected {
+  background-color: black;
+  color: #5526af; /* Change to any desired color for selected category */
+}
+
+/* Prevent line breaks between categories and keep them in one line */
+.vp-categories {
+  white-space: nowrap;
+  background-color: black;
+}
+
+
+
+/* Additional styling for the star icons (font-awesome) */
+.fa {
+  font-size: 20px;
+}
+
+/* Style for the unchecked stars */
+.fa-star:not(.checked) {
+  color: #5526af; /* Adjust the color of the unchecked stars */
+}
+
+/* Style for the checked stars */
+.fa-star.checked {
+  color: #5526af; /* Adjust the color of the checked stars */
+}
+
+/* Style for the border around unchecked stars */
+.fa-star:not(.checked)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #5526af; /* Add a border for unchecked stars */
+  pointer-events: none; /* Prevent the border from affecting the click area */
+}
+
+.show-title {
+  display: flex;
+  align-items: center;
+}
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.show-rating {
+  
+  margin-left: 5px;
+  font-size: 16px;
+  display: flex;
+  
+
+  
+}
+
+.show-info img {
+  width: 120px; /* Adjust the image width as needed */
+  /* height: 250; */
+  margin-right: 50px;
+  
+}
+
+.show-image img {
+  margin-bottom: 20px; /* Optional: Add some spacing between the image and title/rating */
+}
+
+.show-title-rating {
+  display: flex;
+  align-items:start;
+  flex-direction: column;
+  
+  
+}
+
+/* Styling the show-paragraph div */
+.show-paragraph {
+  /* Add some top padding or margin to adjust the vertical position of the paragraph */
+  padding-top: 10px; /* You can adjust the value as needed */
+  margin-bottom: 100px;
+
+}
+
+.vp-titlebar1 {
+  text-align: center;
+  margin-bottom: 10px; /* Optional: Add some spacing between the title and the content */
+}
+
+.show-rating,
+.show-rating p {
+  display: inline-block; /* Display the star icon and show rating in the same line */
+  margin: 0; /* Remove any default margins */
+}
+
+
+/* CSS for the comments section container */
+.vp-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: safe;
+  
+}
+
+/* CSS for the new comments area */
+.vp-new-comments {
+  
+  margin-top: 1px; /* Add some space between the comments area and the previous content */
+  
+}
+
+/* CSS for the comment form */
+.vp-new-comments form {
+  width: 700px; /* Set the desired width for the comment input */
+}
+
+/* CSS for the comment container that holds both textarea and submit button */
+.comment-container {
+  position: relative;
+  
+}
+
+/* CSS for the comment textarea */
+.comment-container textarea {
+  width: 100%;
+  height: 50px; /* Set the desired height for the textarea */
+   /* Add some space for the submit button */
+  border: 1px solid #ccc;
+  padding: 10px;
+  resize: vertical;
+}
+
+/* CSS for the submit button */
+.comment-container button {
+  position: absolute;
+  margin-top: 10px;
+  top: 0;
+  right: 0;
+  width: 100px; /* Set the width of the submit button */
+  height: 50%; /* Make the submit button's height match the textarea's height */
+  background-color: #007bff; /* Set the background color to blue (you can change it) */
+  color: #fff; /* Set the text color to white */
+  border: none; /* Remove border for a cleaner look */
+  cursor: pointer;
+
+}
+
+
+/* Optional: Style the submit button on hover */
+.comment-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.wrapper {
+  padding: 100px;
+}
+
+.image--cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+}
+
+.comment-container1 {
+  position: relative;
+  
+}
+
+.comment-container1 textarea {
+  width: 200%;
+  height: 50px; /* Set the desired height for the textarea */
+   /* Add some space for the submit button */
+  border: 1px solid #ccc;
+  padding: 10px;
+  resize: vertical;
+}
+
+.comment-container1 textarea::placeholder {
+  font-weight: bold;
+}
+
+
+
+
+ 
+

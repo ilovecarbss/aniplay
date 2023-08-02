@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../General_css.css">
   <link rel="stylesheet" href="../videoplayer.css">
   <script src="aniplay/generalJS.js" type="text/javascript"></script> 
+   
 </head>
 <body>
     <!--Start of header-->
@@ -90,83 +91,201 @@
       </header> 
       <!-- End Header-->
   <main>
-  <div class="vp-container">
-    <div class="vp-left-section"> <!--left side of body-->
+  <div class="vp-big-container">
+  <div class="vp-left-container">
+    <div class="vp-left-section1"> <!--left side of body-->
         <video controls> <!--video player-->
         <source src="../../pictures/NarutoTR1.mp4" type="video/mp4">
         Your browser does not support the video tag.
         </video>
     </div>
-    <div class="vp-left-section">
-        <div class="vp-show-desc"> <!--Show description, middle area-->
-        <img src="../../pictures/narutoshippuden.jpg" alt="Show Image">
-        <div class="vp-synopsis">
-        <h3 style="color:plum">Naruto: Shippuden</h3>
-        <br>
-        <p>Naruto Uzumaki left the Hidden Leaf Village for intense training after an event that fueled his desire to become stronger. Now, two and a half years later, the elite rogue ninja organization Akatsuki is threatening the safety of the shinobi world with their grand plan. Despite the impending danger, Naruto's personality remains largely unchanged, still his rambunctious and childish self, but now more confident and determined to protect his loved ones and home. He will continue to fight for what's important to him, even if it means sacrificing his own body, as his journey to become Hokage continues.</p>
+
+
+    <div class="vp-left-section2">
+      <div class="vp-show-desc"> <!--Show description, middle area-->
+        <div class="show-info">
+          <div class="show-image">
+            <img src="../../pictures/narutoshippuden.jpg" alt="Show Image">
+          </div>
+          <div class="show-title-rating">
+            <h3 style="color:plum">Naruto: Shippuden</h3>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <span class="show-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </span>
+          </div>
         </div>
-        </div>
-    </div>
-    <div class="vp-left-section">
-      <div class="vp-comments"> <!-- Bottom area (Comments) -->
-        <h3>Leave a Comment</h3>
-        <form>
-          <textarea placeholder="Type your comment..."></textarea>
-          <button type="submit">Submit</button>
-        </form>
-        <div class="premade-comment">
-          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 1">
-          <p>FlyingSusuke: The opening song is just way TOO GOOD!</p>
-        </div>
-        <div class="premade-comment">
-          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 2">
-          <p>Throina: Really? A cliffhanger like that? I cant wait another week to see arghhh </p>
+        <div class="show-paragraph">
+          <p>Naruto Uzumaki left the Hidden Leaf Village for intense training 
+            after an event that fueled his desire to become stronger. <br>
+            Now, two and a half years later, the elite rogue ninja 
+            organization Akatsuki is threatening the safety of the shinobi world with their grand plan. Despite the impending danger, Naruto's personality remains largely unchanged, still his rambunctious and childish self, 
+            but now more confident and determined to protect his loved ones and home. He will continue to 
+            fight for what's important to him, even if it means sacrificing his own body, as his journey to become Hokage continues.</p>
         </div>
       </div>
     </div>
+  
+    <div class="vp-left-section3">
+      <div class="vp-comments"> <!-- Bottom area (Comments) -->
+        <div class="vp-new-comments">
 
-    <div class="vp-right-section"> <!--right side of body-->
-        <!-- Episode selector -->
-        <div class="vp-episode-selector">
-        <div class="vp-titlebar">
-        <h3>Episodes</h3>
+          <div class="wrapper">
+  
+            <img src="../../pictures/profile.png" class= "image--cover">
+            <form>
+              <div class="comment-container">
+                
+                <textarea placeholder="Leave a comment"></textarea>
+                <button type="submit">Submit</button>
+              </div>
+            </form>     
+          </div>
         </div>
-        <div class="vp-episode-numbers">
-        <div class="episode-no" href="narutoE1.html">1</div>
-        <div class="episode-no" href="">2</div>
-        <div class="episode-no" href="">3</div>
-        <div class="episode-no" href="">4</div>
-        <div class="episode-no" href="">5</div>
-        <div class="episode-no" href="">6</div>
-        <div class="episode-no" href="">7</div>
-        <div class="episode-no" href="">8</div>
-        <!-- Add more episode numbers as needed -->
+        
+        <br>
+        <div class="premade-comment">
+          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 1">
+          <div class="comment-details">
+            <h3 style="color:plum">FlyingSusuke</h3>
+            <form>
+              <div class="comment-container1">
+                <textarea placeholder="The opening song is just way TOO GOOD!"></textarea>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
-    </div>
-    <div class="vp-right-section">
-      <!-- also watch section -->
-      <div class="also-watch">
-        <div class="vp-titlebar">
-        <h3>Also Watch</h3>
+
+        <div class="premade-comment">
+          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 1">
+          <div class="comment-details">
+            <h3 style="color:plum">Throina</h3>
+            <form>
+              <div class="comment-container1">
+                <textarea placeholder="Really? A cliffhanger like that? I cant wait another week to see arghhh"></textarea>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="vp-recommended">
-        <div class="recommended-show" href="">
-        <img src="path/to/recommended-show1.jpg" alt="Recommended Show 1">
-        <p>Show Name 1</p>
-        </div>
-        <div class="recommended-show" href="">
-        <img src="path/to/recommended-show2.jpg" alt="Recommended Show 2">
-        <p>Show Name 2</p>
-        </div>
-        <div class="recommended-show" href="">
-        <img src="path/to/recommended-show2.jpg" alt="Recommended Show 3">
-        <p>Show Name 3</p>
-        </div>
-        </div>
+
+        
       </div>
     </div>
   </div>
+
+
+
+
+
+  <div class="vp-right-container">
+    <div class="vp-right-section1"> <!--right side of body-->
+        <!-- Episode selector -->
+        <div class="vp-episode-selector">
+          <div class="vp-titlebar">
+            <h3>EPISODES</h3>
+          </div>
+          <div class="vp-categories">
+            <div class="category" data-category="1-20">1-20</div>
+            <div class="category" data-category="21-40">21-40</div>
+            <div class="category" data-category="41-60">41-60</div>
+            <div class="category" data-category="61-80">61-80</div>
+            <div class="category" data-category="81-100">81-100</div>
+            <hr>
+            <br>
+          </div>
+          
+          <div class="vp-episode-numbers">
+            <div class="episode-no" href="narutoE1.html">1</div>
+            <div class="episode-no" href="">2</div>
+            <div class="episode-no" href="">3</div>
+            <div class="episode-no" href="">4</div>
+            <div class="episode-no" href="">5</div>
+            <div class="episode-no" href="">6</div>
+            <div class="episode-no" href="">7</div>
+            <div class="episode-no" href="">8</div>
+            <div class="episode-no" href="">9</div>
+            <div class="episode-no" href="">10</div>
+            <div class="episode-no" href="">11</div>
+            <div class="episode-no" href="">12</div>
+            <div class="episode-no" href="">13</div>
+            <div class="episode-no" href="">14</div>
+            <div class="episode-no" href="">15</div>
+            <div class="episode-no" href="">16</div>
+            <div class="episode-no" href="">17</div>
+            <div class="episode-no" href="">18</div>
+            <div class="episode-no" href="">19</div>
+            <div class="episode-no" href="">20</div>
+            
+          
+          <!-- Add more episode numbers as needed -->
+          </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Call the setupEpisodeSelection function when the document is ready
+      document.addEventListener("DOMContentLoaded", function() {
+        selectEpisode();
+        
+      });
+    </script>
+
+
+<div class="vp-right-section2">
+  <!-- also watch section -->
+  <div class="also-watch">
+    <div class="vp-titlebar1">
+      <h4>ALSO WATCH</h4>
+    </div>
+    <div class="recommended-show" href="">
+      <img src="../../pictures/kaguya.jpg" alt="Recommended Show 1">
+      
+      <div class="vp-description">
+        <p>Kaguya</p><br>
+        <span class="show-rating">
+          <span class="fa fa-star checked"></span>
+          <p>Show Rating: 9.5/10</p>
+        </span>
+        
+      </div>
+    </div>
+
+    <div class="recommended-show" href="">
+      <img src="../../pictures/mushoku.png" alt="Recommended Show 1">
+      
+      <div class="vp-description">
+        <p>Mushoku</p><br>
+        <span class="show-rating">
+          <span class="fa fa-star checked"></span>
+          <p>Show Rating: 9.5/10</p>
+        </span>
+        
+      </div>
+    </div>
+
+    <div class="recommended-show" href="">
+      <img src="../../pictures/gasaraki.jpg" alt="Recommended Show 1">
+      
+      <div class="vp-description">
+        <p>Gasaraki</p><br>
+        <span class="show-rating">
+          <span class="fa fa-star checked"></span>
+          <p>Show Rating: 9.5/10</p>
+        </span>
+        
+      </div>
+    </div>
+  
+    </div>
+  </div>
+</div>
+    
+  
   </main>
 
   <!--Start of Footer-->
