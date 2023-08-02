@@ -107,6 +107,18 @@
     <div class="popup-overlay" onclick="closePopup()"></div>
 
     <script>
+  
+function startPopupTimer(img) {
+    img.popupTimer = setTimeout(function() {
+        showPopup(img.dataset.description);
+    }, 500); // 500ms delay before showing the popup
+}
+
+function stopPopupTimer(img) {
+    clearTimeout(img.popupTimer);
+    hidePopup();
+}
+
     var popupTimer;
 
     function startPopupTimer(imageElement) {

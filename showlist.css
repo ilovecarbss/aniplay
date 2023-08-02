@@ -180,4 +180,12 @@ img {
 .popup-overlay.show {
   visibility: visible;
   opacity: 1;
+}
+
+.carousel .carousel-img {
+  display: none;
+}
+
+.carousel .carousel-img:not(.hidden) {
+  display: block;
 }/*# sourceMappingURL=showlist.css.map */
