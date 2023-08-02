@@ -90,7 +90,7 @@ function chgTrendimg2(){
 }
 
 function chgTrendimg3(){
-  document.getElementById("trendimg").src="pictures/tokyorevengers.jpg";
+  document.getElementById("trendimg").src="pictures/tokyorevengerscover.png";
   var link = document.getElementById("trendurl");
         link.setAttribute("href", "Videoplayers/TOKYOREVENGERS/tokyoE1.html");
         return false;
