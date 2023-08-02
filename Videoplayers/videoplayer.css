@@ -210,6 +210,8 @@ body, h1, h2, h3, p, ul, li { /*Reset default styles*/
     cursor: pointer;
   }
 
+
+
   .episode-no.selected{
     background-color: #5526af;
     position: relative;
