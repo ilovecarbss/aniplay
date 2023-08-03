@@ -5,57 +5,73 @@
 
 
   //login form script
-  function Loginvalidate() {
-    var name = document.getElementById("nameLog").value;
-    var password = document.getElementById("passLog").value;
-    
-    
+  // Pseudo-database for storing users
+var users = [];
 
-  //if username or password field empty, or password is shorter than 8 characters, output error
-    if (name == "" || password == "") { 
-      document.getElementById("errorMsg").innerHTML = "Please fill the required fields";
-      return false;
-    }
+function Loginvalidate() {
+  var name = document.getElementById("nameLog").value;
+  var password = document.getElementById("passLog").value;
 
-    else if (password.length < 8) {
-      document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters";
-      return false;
-    }
-
-
-    else {
-      document.getElementById("headerbutton").className = "postsignup-button";
-      document.getElementById("headerbutton").innerHTML = name;
-      confirm("Welcome back, " + name +"!");
-      document.getElementById("loginPop").style.display = "none";
-      return false;
-      
-    }
+  // Check for empty fields first
+  if (name == "" || password == "") {
+    document.getElementById("errorMsg").innerHTML = "Please fill the required fields";
+    return false;
   }
 
-  //handles signup form script
-  function Signupvalidate() {
-    var Simail = document.getElementById("emailSign").value;
-    var Siname = document.getElementById("nameSign").value;
-    var Sipassword = document.getElementById("passSign").value;
-
-    if (Simail == "" || Siname == "" || Sipassword == "") {
-      document.getElementById("errorsignMsg").innerHTML = "Please fill in the required fields"
-      return false;
-    }
-
-    else if (Sipassword.length < 8) {
-      document.getElementById("errorsignMsg").innerHTML = "Your password must include at least 8 characters"
-      return false;
-    }
-    else {
-      //reloads the page after user presses ok on alert
-
-      confirm("Successfully signed up")
-      return true;
-    }
-
+  // Check password length
+  else if (password.length < 8) {
+    document.getElementById("errorMsg").innerHTML = "Your password must include at least 8 characters";
+    return false;
   }
+
+  // Check against pseudo-database
+  var user = users.find(user => user.name === name && user.password === password);
+
+  if (!user) {
+    document.getElementById("errorMsg").innerHTML = "Invalid username or password";
+    return false;
+  }
+
+  else {
+    // Change class name and inner HTML of header button
+    document.getElementById("headerbutton").className = "postsignup-button";
+    document.getElementById("headerbutton").innerHTML = name;
+
+    // Hide login popup
+    document.getElementById("loginPop").style.display = "none";
+
+    // Show welcome message
+    confirm("Welcome back, " + name + "!");
+    return false;
+  }
+}
+
+// Handles signup form script
+function Signupvalidate() {
+  var Simail = document.getElementById("emailSign").value;
+  var Siname = document.getElementById("nameSign").value;
+  var Sipassword = document.getElementById("passSign").value;
+
+  if (Simail == "" || Siname == "" || Sipassword == "") {
+    document.getElementById("errorsignMsg").innerHTML = "Please fill in the required fields";
+    return false;
+  }
+
+  else if (Sipassword.length < 8) {
+    document.getElementById("errorsignMsg").innerHTML = "Your password must include at least 8 characters";
+    return false;
+  }
+
+  else {
+    // Add user to pseudo-database
+    users.push({ name: Siname, email: Simail, password: Sipassword });
+
+    // Confirm signup
+    confirm("Successfully signed up");
+    return false;
+  }
+}
+
  
   
 
