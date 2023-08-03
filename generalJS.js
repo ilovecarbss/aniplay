@@ -36,7 +36,7 @@ function Loginvalidate() {
     // Change class name and inner HTML of header button
     document.getElementById("headerbutton").className = "postsignup-button";
     document.getElementById("headerbutton").innerHTML = name;
-     
+    document.getElementById("headerbutton").onclick = "signOut()";
 
     // Hide login popup
     document.getElementById("loginPop").style.display = "none";
@@ -81,14 +81,15 @@ function toggleDisplay(element) {
 }
 
  
-  
+function SOpop(){
+  document.getElementById("SObutton").style.display ="block";
+}
 
 function signOut(){ //signs the user out when press user button
   confirm("Sign out?")
   if (confirm("Sign out") == true) {
     location.reload();
   }
-
 }
 //popup open/close functions
 function openPop() {
