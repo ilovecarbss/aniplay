@@ -295,12 +295,23 @@ a.hi{
 
   .visible {
     display: inline-block; /* or display: block; depending on your design */}
-  @media screen and (max-width: 700px){
-    .pictures-container {
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
+  
+}
+
+@media screen and (max-width: 700px){
+  .pictures-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-    
-  }
+
+}
+@media screen and (max-width: 400px){
+.pictures-container {
+  display: flex;
+  overflow-wrap: normal;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+}
