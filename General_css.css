@@ -192,69 +192,13 @@ body{
   color: #ccc;
 }
 
-
-/*css for credits page */
-button#contactUsBtn {
-  margin: 1%;
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-form-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.contact-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #5526af;
-  padding: 20px;
-  width: 200px;
-  border-radius: 5px;
-}
-
-.contact-form h2 {
-  margin-bottom: 20px;
-  padding-left: 20%;
-}
-
-.creditcontainer{
-  padding-left: 2%
-}
-.smallcreditbox {
-  /* Add styles for small credit box */
-  cursor: pointer;
-  background-color: #e0e0e0;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.subsmallcreditbox {
-  /* Add styles for sub small credit box */
-  padding: 5px;
-  margin-left: 20px;
-  background-color: #f0f0f0;
-  display: none;
-}
-
 @media screen and (max-width: 850px) { /* viewport for main page */ /*breakpoint at 850px*/
   .welcomebox, .slogan, .trending-now {
     width: 80%;
    /* The width is 80% when the viewport is 850px or smaller */
   }
   .trending-now{
-    margin-top: 70% ;
+    margin-top: 75% ;
     margin-left: 50%;
     margin-bottom: 20%;
 
@@ -275,3 +219,4 @@ button#contactUsBtn {
     height: 10%;
   }
   }
+
