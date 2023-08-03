@@ -60,12 +60,14 @@ button#contactUsBtn {
   }
   
   
-  @media screen and (max-width: 850px) { /* viewport for credits */ /*breakpoint at 850px*/
-    button#contactUsBtn{
-    margin-bottom: 10%;
+ /* viewport for credits */ /*breakpoint at 850px*/
+    @media screen and (max-width: 850px) { /* viewport for credits */ /*breakpoint at 850px*/
+      button#contactUsBtn{
+      margin-bottom: 10%;
+      }
     }
 
- }
+ 
   
 
 
