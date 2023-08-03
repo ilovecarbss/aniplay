@@ -67,13 +67,7 @@ function Signupvalidate() {
     return false;
   }
 }
-function toggleDisplay(element) {
-  if (element.style.display === "none" || element.style.display === "") {
-    element.style.display = "block";
-  } else {
-    element.style.display = "none";
-  }
-}
+
 //popup open/close functions
 function openPop() {
 document.getElementById("loginPop").style.display = "block";
@@ -170,4 +164,12 @@ function validateContactForm() {
   closeContactForm();
   alert("Message sent!");
   return true; // Allow form submission
+}
+
+function toggleDisplay(element) {
+  if (element.style.display === "none" || element.style.display === "") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
 }
