@@ -9,6 +9,59 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     overflow:hidden;
 }
+.right-div-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5526AF;
+  }
+  button.active {
+    background-color: #5526AF;
+  }
+  
+  .list li.active {
+    background-color: #5526AF; /* Background color for the active/last clicked item */
+  }
+  
+  /* Style for the list number */
+  .list {
+    counter-reset: list-counter;
+  }
+  
+  .list li {
+    counter-increment: list-counter;
+    list-style-type: none;
+    background-color: #000000;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .list li:before {
+    content: counter(list-counter) ".";
+    margin-right: 10px;
+  }
+  
