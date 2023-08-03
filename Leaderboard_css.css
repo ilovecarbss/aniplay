@@ -175,20 +175,37 @@ display: flex;
     content: counter(list-counter) ".";
     margin-right: 10px;
   }
+.header {
+  margin-bottom: 2em; /* or 2em if you want */
+}
 
-  @media screen and (max-width: 900px) { /* viewport for credits */ /*breakpoint at 850px*/
+.footer {
+  margin-top: 2em; /* or 2em if you want */
+}
+
+@media screen and (max-width: 920px) { /* viewport for credits */ /*breakpoint at 850px*/ 
      
-    .left-div-container {
-      width:100%;
-      justify-content: none;
-      height:auto;
-      
+    .big-div-container{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .left-div-container{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow:hidden;
     }
     .right-div-container{
-      width:100%;
-      margin-bottom: 5%;
-      
-
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow:hidden;
+        align-items: center;
+    }
   }
-}
   
