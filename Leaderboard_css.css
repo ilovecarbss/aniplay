@@ -1,4 +1,8 @@
+main{
+  margin-top: 5%;
+}
 .big-div-container{
+  
     width: 100%;
     height: 100%;
     display: flex;

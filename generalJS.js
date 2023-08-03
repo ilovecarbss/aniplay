@@ -1,14 +1,9 @@
 //General js functions used by multiple sites
 
-//Script for login form and signup form
-  
-
-
-  //login form script
-  // Pseudo-database for storing users
-
+//Script for login form and signup
+//login form script
+// Pseudo-database for storing users
 var users = [];
-
 function Loginvalidate() {
   var name = document.getElementById("nameLog").value;
   var password = document.getElementById("passLog").value;
@@ -79,9 +74,6 @@ function toggleDisplay(element) {
     element.style.display = "none";
   }
 }
-
- 
-
 //popup open/close functions
 function openPop() {
 document.getElementById("loginPop").style.display = "block";
