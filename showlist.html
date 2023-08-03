@@ -301,12 +301,7 @@ function stopPopupTimer(img) {
     }
 
     function showPopup(imageElement) {
-    var popupContainer = document.getElementById("popupContainer");
-    var popupImage = document.getElementById("popupImage");
-    var popupDescription = document.getElementById("popupDescription");
-    var popupOverlay = document.getElementById("popupOverlay");
-
-
+   
     // Set the source of the popup image to the source of the image that was clicked
     popupImage.src = imageElement.src;
     
@@ -317,7 +312,7 @@ function stopPopupTimer(img) {
     var imageTitleDiv = document.getElementById('imageTitle');
     imageTitleDiv.textContent = title;
 
-    // Set the text of the popup description to the data-description of the image that was clicked
+    // Set the text of the popup description to the data-description of the image that wass clicked
     if (description) {
         popupDescription.textContent = description;
     }
@@ -340,7 +335,7 @@ function stopPopupTimer(img) {
 
   
       function closePopup() {
-          var popupContainer = document.getElementById("popupContainer");
+
           popupContainer.classList.remove("show");
           document.getElementById('popupOverlay').classList.add('hidden');
 
