@@ -107,16 +107,23 @@
 
 <!--main content of page-->
 <main> 
-
-<div class="creditcontainer">
-
-<h4>Who We Are</h4>
-<h4>Why Aniplay</h4>
-<h4>Sponsors</h4>
-<h4>Special Thanks</h4>
-
-</div>
-
+  <div class="credit-section">
+    <div class="smallcreditbox" onclick="toggleDisplay(this.nextElementSibling)"><h2>Who We Are</h2></div>
+    <div class="subsmallcreditbox" style="display:none;"><h3>We are a group of computing students from Sunway University, looking to make a name of ourselves.</h3></div>
+  </div>
+  <div class="credit-section">
+    <div class="smallcreditbox" onclick="toggleDisplay(this.nextElementSibling)"><h2>Why Aniplay</h2></div>
+    <div class="subsmallcreditbox" style="display:none;"><h3>We are lifelong anime fans, we had a vision of a no-fuss anime website where you can easily watch any anime you want and Aniplay was born.</h3></div>
+  </div>
+  <div class="credit-section">
+    <div class="smallcreditbox" onclick="toggleDisplay(this.nextElementSibling)"><h2>Sponsors</h2></div>
+    <div class="subsmallcreditbox" style="display:none;"><h3>We are looking for sponsors! Please contact our business e-mail!</h3></div>
+  </div>
+  <div class="credit-section">
+    <div class="smallcreditbox" onclick="toggleDisplay(this.nextElementSibling)"><h2>Special Thanks</h2></div>
+    <div class="subsmallcreditbox" style="display:none;"><h3>We are looking for sponsors! Please contact our business e-mail!</h3></div>
+  </div>
+  
 
 <!-- A button which, when pressed opens up the contact us form-->
 <button id="contactUsBtn" onclick="openContactForm()">Contact Us</button>

@@ -232,6 +232,21 @@ button#contactUsBtn {
 .creditcontainer{
   padding-left: 2%
 }
+.smallcreditbox {
+  /* Add styles for small credit box */
+  cursor: pointer;
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.subsmallcreditbox {
+  /* Add styles for sub small credit box */
+  padding: 5px;
+  margin-left: 20px;
+  background-color: #f0f0f0;
+  display: none;
+}
 
 @media screen and (max-width: 850px) { /* viewport for main page */ /*breakpoint at 850px*/
   .welcomebox, .slogan, .trending-now {
