@@ -179,8 +179,9 @@
     <div class="big-popup-container" id="popupContainer">
       <div class="popup-container-left">
         <div class="small-box-container">
-          <div class="small-box">1</div>
-          <div class="small-box">2</div>
+          
+          <a class="hi" id="link1" href="#"><div class="small-box">1</div></a>
+          <a class="hi" id="link2" href="#"><div class="small-box">2</div></a>
           <div class="small-box">3</div>
           <div class="small-box">4</div>
           <div class="small-box">5</div>
@@ -200,7 +201,7 @@
       <div class="popup-container-right">
         <div class="popup-content-container">
           <div class="title-name" id="imageTitle"></div>
-          <img id="popupImage" src="" alt="">
+          <img class="kekw" id="popupImage" src="" alt="">
           <div class="popup-description" id="popupDescription"></div>
         </div>
       </div>
@@ -213,6 +214,27 @@
     
 
     <script>
+var showLinks = {
+  "Black Clover": { link1: "Videoplayers/BLACKCLOVER/cloverE1.html", link2: "Videoplayers/BLACKCLOVER/cloverE2.html" },
+  "Chainsaw Man": { link1: "Videoplayers/CHAINSAW/chainE1.html", link2: "Videoplayers/CHAINSAW/chainE2.html" },
+  "Re_zero": { link1: "Videoplayers/REZERO/rzE1.html", link2: "Videoplayers/REZERO/rzE2.html" },
+  "Mushoku": { link1: "Videoplayers/MUSHOKU/mushokuE1.html", link2: "Videoplayers/MUSHOKU/mushokuE2.html" },
+  "Gasaraki": { link1: "Videoplayers/GASARAKI/gasarakiE1.html", link2: "Videoplayers/GASARAKI/gasarakiE2.html" },
+  "Kaguya Love is War": { link1: "Videoplayers/KAGUYA/kaguyaE1.html", link2: "Videoplayers/KAGUYA/kaguyaE2.html" },
+  "Shawli's Fantasy": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Blade Runner": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Seraph of the end": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Oshi No Ko": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Demon Blade": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Porter of heroes": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Kakegui": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Rent a girlfriend": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Sword Art Online": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Hell's Paradise": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Bastard Heavy Metal": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Love of Kill": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+  "Collar Malice": { link1: "Videoplayers/extra/extras.html", link2: "Videoplayers/extra/extras.html" },
+};
 let currentVisibleIndex = 0;
 
 function shiftImages(direction, carouselId) {
@@ -299,7 +321,13 @@ function stopPopupTimer(img) {
     if (description) {
         popupDescription.textContent = description;
     }
-    
+    var links = showLinks[title]; // Look up the links for this title
+
+    if (links) {
+        // Set the hrefs for the two links
+        document.getElementById('link1').href = links.link1;
+        document.getElementById('link2').href = links.link2;
+    }
     console.log(popupImage.src);
     console.log(popupDescription.textContent);
     console.log(title)
