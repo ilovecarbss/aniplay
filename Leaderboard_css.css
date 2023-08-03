@@ -11,7 +11,7 @@
     justify-content: center;
     overflow:hidden;
 }
-.left-div-container{
+.right-div-container{
     width: 50%;
     height: 100%;
     display: flex;
@@ -19,6 +19,41 @@
     justify-content: center;
     overflow:hidden;
 }
+.preview-container{
+width:80%;
+height:20%;
+}
+.desc-container{
+
+}
+.lb-showimg{
+
+}
+.lb-showdesc{
+
+}
+.Namerate.container{
+
+}
+.lb-showname{
+
+}
+.lb-rating{
+
+}
+.Genrewatch-container{
+
+}
+.lb-genre{
+
+}
+.lb-watchnow{
+  
+}
+.lb-watchnow button{
+
+}
+
 
 .buttons {
     justify-content: space-between;
