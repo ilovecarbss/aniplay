@@ -1,0 +1,304 @@
+<!--https://www.figma.com/file/COBqW15L6CGDj2mRL1dtEO/WEBDESIGNactual?type=design&node-id=1%3A22&mode=design&t=9hYHST7bC24tmvrn-1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="pictures/titleicon.png"> <!--Icon for the website at the title area-->
+  <title>Watch Re:Zero</title>
+  <link rel="stylesheet" href="../../General_css.css">
+  <link rel="stylesheet" href="../videoplayer.css">
+  <script src="../../generalJS.js" type="text/javascript"></script> 
+</head>
+<body>
+    <!--Start of header-->
+    <header> 
+  
+    <nav class="headfootnav">
+          
+    <a href="Main.html"><img src="../../pictures/aniplaylogo.png" alt="Main page link" style="height: 65px; width: auto"></a>
+  
+    <nav class="headfootnav">
+          
+        <a href="../../Main.html"><img src="../../pictures/aniplaylogo.png" alt="Main page link" style="height: 65px; width: auto"></a>
+      
+        <div class="navspace">
+          <a href="../../showlist.html" style="color: white;">Show List</a>
+          </div>
+      
+          <div class="navspace">
+          <a href="../../leaderboard.html" style="color: white;">Leaderboards</a>
+          </div>
+              
+        </nav>
+      </nav>
+  
+      <form action="#" method="get"> <!--Search bar-->
+      <input type="text" name="search" placeholder="Find a show...">
+      <button type="submit">Search</button>
+      </form>
+  
+      <script> //search bar dummy search functionality
+      const search = document.getElementById('search');
+      const button = document.querySelector('button');
+      button.addEventListener('click', () => {
+      const query = search.value;
+      });
+      // perform search with query
+      </script>
+  
+  
+      <!--Button that on press, opens the login form Popup-->
+      <button onclick="openPop()" class="signup-button" id="headerbutton">Login</button>
+  
+      <!-- Login form -->
+      <div class="loginform-popup" id="loginPop">
+      <form name="loginform" class="login-container" onsubmit="return Loginvalidate()" method="POST"> <!-- What the form does when pressed submit-->
+      <h1>Welcome Back!<br>Login</h1>
+  
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="nameLog" name="name" required>
+      <label for="passw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="passLog" name="passw" required>
+  
+      <button type="submit" class="bttn">Login</button>
+      <button type="button" class="bttn" onclick="closePop()">Close</button>
+      <div id="errorMsg"></div>
+  
+      <!--Button leads to sign up,closes login-->
+      <h3>Dont have an account? <button type="button" onclick="SignupPop();closePop()" >Sign up</button></h3> 
+      </form>
+      </div>
+      
+      <!--Sign up form-->
+      <div class="loginform-popup" id="SignPop">
+      <form name="signupform" class="login-container" onsubmit="return Signupvalidate()" method="POST"> <!-- What the form does when pressed submit-->
+      <h1>Welcome To Aniplay!<br>Sign up</h1>
+    
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" id="emailSign" name="email" required>
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="nameSign" name="name" required>
+      <label for="passw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="passSign" name="passw" required>
+  
+      <button type="submit" class="bttn" >Sign Up</button>
+      <button type="button" class="bttn" onclick="closeSignPop()">Close</button>
+      <div id="errorsignMsg"></div>
+     
+      </form>
+      </div>
+  
+     
+      </header> 
+      <!-- End Header-->
+  <main>
+  <div class="vp-big-container">
+  <div class="vp-left-container">
+    <div class="vp-left-section1"> <!--left side of body-->
+        <video controls> <!--video player-->
+        <source src="../../pictures/rezero1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <div class="vp-left-section2">
+      <div class="vp-show-desc"> <!--Show description, middle area-->
+        <div class="show-info">
+          <div class="show-image">
+            <img src="../../pictures/re_zero.jpg" alt="Show Image">
+          </div>
+          <div class="show-title-rating">
+            <h3 style="color:plum">Re:Zero</h3> 
+            <span class="show-rating">
+              Rating: 8.2/10
+            </span>
+          </div>
+        </div>
+        <div class="show-paragraph">
+          <p>When Subaru Natsuki leaves the convenience store, the last thing he expects is to be wrenched from his everyday life and dropped into a fantasy world. Things are not looking good for the bewildered teenager; however, not long after his arrival, he is attacked by some thugs. Armed with only a bag of groceries and a now useless cell phone, he is quickly beaten to a pulp. Fortunately, a mysterious beauty named Satella, in hot pursuit after the one who stole her insignia, happens upon Subaru and saves him. In order to thank the honest and kindhearted girl, Subaru offers to help in her search, and later that night, he even finds the whereabouts of that which she seeks. But unbeknownst to them, a much darker force stalks the pair from the shadows, and just minutes after locating the insignia, Subaru and Satella are brutally murdered.
+            <br>
+            However, Subaru immediately reawakens to a familiar scene—confronted by the same group of thugs, meeting Satella all over again—the enigma deepens as history inexplicably repeats itself.
+            </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="vp-left-section3">
+      <div class="vp-comments"> <!-- Bottom area (Comments) -->
+        <div class="vp-new-comments">
+
+          <div class="wrapper">
+  
+            <img src="../../pictures/profile.png" class= "image--cover">
+            <form>
+              <div class="comment-container">
+                
+                <textarea placeholder="Leave a comment"></textarea>
+                <button type="submit">Submit</button>
+              </div>
+            </form>     
+          </div>
+        </div>
+        
+        <br>
+        <div class="premade-comment">
+          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 1">
+          <p>FlyingSusuke: Damn when will teh mc's suffering end</p>
+        </div>
+
+        <div class="premade-comment">
+          <img src="../../pictures/default-user-icon-13.jpg" alt="Icon 2">
+          <p>Throina: Really? A cliffhanger like that? </p>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="vp-right-container">
+    <div class="vp-right-section1"> <!--right side of body-->
+        <!-- Episode selector -->
+        <div class="vp-episode-selector">
+          <div class="vp-titlebar">
+            <h3>EPISODES</h3>
+          </div>
+          <div class="vp-categories">
+            <div class="category" data-category="1-20">1-20</div>
+            <div class="category" data-category="21-40">21-40</div>
+            <div class="category" data-category="41-60">41-60</div>
+            <div class="category" data-category="61-80">61-80</div>
+            <hr>
+            <br>
+          </div>
+          
+          <div class="vp-episode-numbers">
+            <a href="rzE1.html"><div class="episode-no">1</div></a>
+            <a href="rzE2.html"><div class="episode-no">2</div></a>
+            <div class="episode-no" >3</div>
+            <div class="episode-no" >4</div>
+            <div class="episode-no" >5</div>
+            <div class="episode-no" >6</div>
+            <div class="episode-no" >7</div>
+            <div class="episode-no" >8</div>
+            <div class="episode-no" >9</div>
+            <div class="episode-no" >10</div>
+            <div class="episode-no" >11</div>
+            <div class="episode-no" >12</div>
+            <div class="episode-no" >13</div>
+            <div class="episode-no" >14</div>
+            <div class="episode-no" >15</div>
+            <div class="episode-no" >16</div>
+            <div class="episode-no" >17</div>
+            <div class="episode-no" >18</div>
+            <div class="episode-no" >19</div>
+            <div class="episode-no" >20</div>
+            
+          
+          <!-- Add more episode numbers as needed -->
+          </div>
+    </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+      // Call the setupEpisodeSelection function when the document is ready
+      document.addEventListener("DOMContentLoaded", function() {
+        selectEpisode();
+        
+      });
+    </script>
+
+
+<div class="vp-right-section2">
+  <!-- also watch section -->
+  <div class="also-watch">
+    <div class="vp-titlebar1">
+      <h4>ALSO WATCH</h4>
+    </div>
+    <div class="recommended-show">
+      <a href="../BLACKCLOVER/cloverE1.html">
+      <img src="../../pictures/black_clover.jpg" alt="Recommended Show 1">
+      </a>
+      <div class="vp-description">
+        <p>Black Clover</p><br>
+        <span class="show-rating">
+          <p>Show Rating: 8.1/10</p>
+        </span>
+        
+      </div>
+      
+
+    </div>
+
+    <div class="recommended-show" >
+      <a href="../MUSHOKU/mushokuE1.html">
+      <img src="../../pictures/mushoku.png" alt="Recommended Show 1">
+      </a>
+      <div class="vp-description">
+        <p>Mushoku</p><br>
+        <span class="show-rating">
+          <p>Show Rating: 9.0/10</p>
+        </span>
+        
+      </div>
+      
+    </div>
+
+    <div class="recommended-show">
+      <a href="../GASARAKI/gasarakiE1.html">
+      <img src="../../pictures/gasaraki.jpg" alt="Recommended Show 1">
+      </a>
+      <div class="vp-description">
+        <p>Gasaraki</p><br>
+        <span class="show-rating">
+          <p>Show Rating: 9.0/10</p>
+        </span>
+        
+      </div>
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+    
+  
+  </main>
+
+  <!--Start of Footer-->
+  <footer>
+
+    <nav class = "headfootnav">
+    <div class="navspace">
+    <a href="https://www.facebook.com/"><img src="../../pictures/facebookico.svg" alt="facebook icon" style="height:35px ; width:auto"></a></li>
+    </div>
+
+    <div class="navspace">
+    <a href="https://www.twitter.com/"><img src="../../pictures/twitterico.svg" alt="twitter icon" style="height:35px ; width:auto"></a></li>
+    </div>
+
+    <div class="navspace">
+    <a href="https://www.reddit.com/"><img src="../../pictures/redditico.svg" alt="reddit icon" style="height:35px ; width:auto"></a></li>
+    </div>
+    </nav>
+
+    <div style="display: flex; align-items: center; padding-right:30px;">
+    <a href="../../credits.html"><button>Info and Credits</button></a>
+
+    <div class="navspace">
+    <img src="../../pictures/footer_pic.png" alt="chopper pic" style="height: 60px; width: auto;">
+    </div>
+
+    </div>
+    </nav> 
+    </footer>
+    <!--End footer-->
+</body>
+</html>

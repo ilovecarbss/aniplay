@@ -25,7 +25,7 @@ h1 {
   font-weight: 300;
   text-align: left; /* Align the heading to the left */
   margin: 1em 1em 0.5em 2em; /* Add space below the heading */
-  color: green;
+  color: #5526af;
 }
 
 .arrow-left {
