@@ -191,6 +191,39 @@ body{
   background-color: #5526AF;
   color: #ccc;
 }
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5526AF;
+}
+button.active {
+  background-color: #5526AF;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  background-color: #000000;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 850px) { /* viewport for main page */ /*breakpoint at 850px*/
   .welcomebox, .slogan, .trending-now {

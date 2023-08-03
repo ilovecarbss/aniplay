@@ -8,195 +8,7 @@
   <script src="generalJS.js" type="text/javascript"></script>
 
 
-  <style>
-.container{
-  display: flex;
-  justify-content: flex-start;
-  gap: 40px;
-  margin-left: 20px;
-}
-
-.categorynav {
-
-  height: 38px;
-  width: 88px;
-  background-color: black;
-  color: white;
-  font-family: Arial;
-  font-size: 16px;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  padding: 10px;
-  border: 5px solid black;
-  margin-top: 10px;
-}
-
-.categorynav:hover {
-  background-color: #5526af;
-  cursor: pointer;
-}
-
-.categorynav:active {
-  background-color: #5526af;
-}
-
-.container-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.show-popup:hover .popup-overlay {
-  display: flex;
-}
-
-.show-popup .popup-overlay:hover {
-  display: none;
-}
-
-.show-ranking-table {
-  width: 650px; 
-  background-color: black; 
-  color: white; 
-  border-collapse: collapse; 
-  margin: 20px; 
-}
-
-.show-ranking-table {
-  width: 650px; 
-  background-color: black; 
-  color: white; 
-  border-collapse: collapse; 
-  margin: 20px; 
-}
-
-
-.show-rank, .show-title {
-  height: 10px; 
-  padding: 5px; 
-  text-align: left; 
-  vertical-align: middle; 
-}
-
-
-.show-rank {
-  width: 50px; 
-}
-
-
-.show-title {
-  text-align: center;
-}
-
-
-tr:hover {
-  background-color: #5526af;
-  cursor: pointer; 
-}
-
-.show-ranking-button {
-  /* Make the anchor tag look like a button */
-  display: block; /* Block-level element to take full width */
-  width: 650px;
-  text-decoration: none; /* Remove underline for the link */
-  padding: 0; /* Remove padding to make it visually look like a button */
-  border: none; /* Remove border to make it visually look like a button */
-  background-color: black;
-  color: white;
-  margin: 20px;
-  cursor: pointer;
-}
-
-.show-ranking-button:hover {
-  /* Add a hover effect to the button */
-  background-color: #5526af;
-}
-
-.videoscreen {
-  width: 378px;
-  height: 145px;
-  background-color: black;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  margin-top: 90px;
-}
-
-.videoscreen img {
-  width: 20px; 
-  height: 20px;
-}
-
-.showinformation {
-  width: 378px;
-  height: 415px;
-  background-color: black;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  margin-top: 90px;
-}
-
-.movietitlesmol {
-  width: 180px;
-  height: 50px;
-  background-color: #5526af;
-  position: absolute;
-  top: 50px;
-  right:248px;
-  margin-top: 455px;
-}
-
-.genboard {
-  width: 378px;
-  height: 80px;
-  background-color: black;
-  position: absolute;
-  top: 50px;
-  right:50px;
-  margin-top: 505px;
-} 
-
-.wrn {
-  width: 125px;
-  height: 30px;
-  background-color: #5526af;
-  color: white;
-  font-family: Arial;
-  font-size: 16px;
-  position: absolute;
-  top: 50px;
-  right: 175px;
-  margin-top: 540px;
-  display: flex;
-  justify-content: center; 
-  align-items: center
-}
-
-
-</style>
+  
   <script src="generalJS.js" type="text/javascript"></script> 
 </head>
 
@@ -223,14 +35,7 @@ tr:hover {
     <button type="submit">Search</button>
     </form>
 
-    <script> //search bar dummy search functionality
-    const search = document.getElementById('search');
-    const button = document.querySelector('button');
-    button.addEventListener('click', () => {
-    const query = search.value;
-    });
-    // perform search with query
-    </script>
+
 
 
     <!--Button that on press, opens the login form Popup-->
@@ -279,145 +84,64 @@ tr:hover {
     <!-- End Header-->
     <!--Main-->
     <main>
-<table class="fixed_headers" style=" width: 861px; text-align: center; ">
-  <div class="container">
-    <button class="categorynav" onclick="handleButtonClick('Day')" onmouseover="handleButtonHover(this)">Day</button>
-    <button class="categorynav" onclick="handleButtonClick('Week')" onmouseover="handleButtonHover(this)">Week</button>
-    <button class="categorynav" onclick="handleButtonClick('Month')" onmouseover="handleButtonHover(this)">Month</button>
-    <button class="categorynav" onclick="handleButtonClick('Year')" onmouseover="handleButtonHover(this)">Year</button>
-    <button class="categorynav" onclick="handleButtonClick('All Time')" onmouseover="handleButtonHover(this)">All Time</button>
-  </div>
+      <div class="sortbuttons">
+        <button onclick="sortList(event)">Day</button>
+        <button onclick="sortList(event)">Week</button>
+        <button onclick="sortList(event)">Month</button>
+        <button onclick="sortList(event)">Year</button>
+        <button onclick="sortList(event)">All Time</button>
+    </div>
+    
+    <ol class="list" id="myList">  
+        <li onclick="handleItemClick(this)">Chainsaw man</li>
+        <li onclick="handleItemClick(this)">Tokyo Revengers</li>
+        <li onclick="handleItemClick(this)">Jujutsu Kaisen</li>
+        <li onclick="handleItemClick(this)">Spy X Family</li>
+        <li onclick="handleItemClick(this)">Attack On Titan</li>
+        <li onclick="handleItemClick(this)">Demon Slayer</li>
+        <li onclick="handleItemClick(this)">Black Clover</li>
+        <li onclick="handleItemClick(this)">Fullmetal Alchemist</li>
+        <li onclick="handleItemClick(this)">My Hero Academia</li>
+        <li onclick="handleItemClick(this)">Naruto: Shippuden</li>
+    </ol>
+</main>
 
-  <div class="show-popup">
-  <a href="#" class="show-ranking-button">
-    <table class="show-ranking-table">
-      <tr>
-        <td class="show-rank">1.</td>
-        <td class="show-title">CHAINSAW MAN</td>
-      </tr>
-    </table>
-  </a>
-<!-- Pop-up content -->
-<div class="popup-overlay">
-  <div class="popup-content">
-    <img src="chainsawmancover.png" alt="Chainsaw Man Cover">
-    <img src="chainsawmanvid.png" alt="Chainsaw Man Video">
-    <p>Synopsis: Following a betrayal, a young man left for dead is reborn as a powerful devil-human hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils. When his father died, Denji was stuck with a huge debt and no way to pay it back.</p>
-  </div>
-</div>
-</div>
+<script>
+  //search bar dummy search functionality
+  const search = document.getElementById('search');
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+    const query = search.value;
+    });
+    // perform search with query
+    function handleItemClick(item) {
+    // Remove 'active' class from all list items
+    document.querySelectorAll('.list li').forEach(li => li.classList.remove('active'));
+    
+    // Add 'active' class to clicked item
+    item.classList.add('active');
 
-
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-      <td class="show-rank">2.</td>
-      <td class="show-title">TOKYO REVENGERS</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">3.</td>
-    <td class="show-title">JUJUTSU KAISEN</td>
-    </tr>
-  </table>
-  </a>
-  
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">4.</td>
-    <td class="show-title">SPY X FAMILY</td>
-    </tr>
-  </table>
-  </a>
-  
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">5.</td>
-    <td class="show-title">ATTACK ON TITAN</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button"> 
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">6.</td>
-    <td class="show-title">DEMON SLAYER</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">7.</td>
-    <td class="show-title">BLACK CLOVER</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">8.</td>
-    <td class="show-title">FULLMETAL ALCHEMIST</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">9.</td>
-    <td class="show-title">MY HERO ACADEMIA</td>
-    </tr>
-  </table>
-  </a>
-
-  <a href="#" class="show-ranking-button">
-  <table class="show-ranking-table">
-    <tr>
-    <td class="show-rank">10.</td>
-    <td class="show-title">NARUTO: SHIPPUDEN</td>
-    </tr>
-</table>
-</a>
+    // Other code to handle item click, if needed
+    alert(item.innerHTML + ' was clicked.');
+}
 
 
-<div class="videoscreen">
-  <img src="playbutton.png" alt="Play" alt="Play Button">
-</div>
-<div class="showinformation"></div>
-<div class="movietitlesmol"></div>
-<div class="genboard"></div>
-<div class="wrn">Watch Now</div>
+function sortList(event) {
+    // Remove 'active' class from all buttons
+    document.querySelectorAll('.sortbuttons button').forEach(btn => btn.classList.remove('active'));
+
+    // Add 'active' class to clicked button
+    event.target.classList.add('active');
+
+    var list = document.getElementById('myList');
+    var items = Array.from(list.getElementsByTagName('LI'));
+    items.sort(() => 0.5 - Math.random());
+    items.forEach(item => list.appendChild(item));
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-</tbody>
-</table>
-</mai
-
+</script>
 <!--Start of Footer-->
 <footer>
 
