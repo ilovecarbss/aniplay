@@ -6,6 +6,7 @@
 
   //login form script
   // Pseudo-database for storing users
+  
 var users = [];
 
 function Loginvalidate() {
